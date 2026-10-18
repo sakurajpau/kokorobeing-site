@@ -53,10 +53,11 @@ table.info { width: 100%; border-collapse: collapse; background: var(--paper); b
 .btn.line { background: #06C755; }
 .btn.ghost { background: var(--paper); color: var(--ink); border: 1px solid #B9BDB8; }
 .small { font-size: 14px; color: var(--muted); }
-footer { background: var(--dark); color: #9FA9B0; font-size: 14px; padding: 40px 20px 28px; }
+
 footer .in { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
 footer nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
 footer a { color: #C9CFD3; text-decoration: none; }
+@media (max-width: 760px) { .head .in { padding: 10px 16px; gap: 4px; } .head nav { flex-wrap: nowrap; overflow-x: auto; width: 100%; gap: 18px; padding-bottom: 4px; scrollbar-width: none; } .head nav::-webkit-scrollbar { display: none; } .head nav a { white-space: nowrap; } }
 </style>
 </head>
 <body>
@@ -123,15 +124,38 @@ footer a { color: #C9CFD3; text-decoration: none; }
   <p class="small">制定日:2026年10月18日</p>
 
 </main>
-<footer>
-  <div class="in">
-    <nav aria-label="規約">
-      <a href="../legal/tokushoho.html">特定商取引法に基づく表記</a>
-      <a href="../legal/privacy.html">プライバシーポリシー</a>
-      <a href="../legal/disclaimer.html">免責事項</a>
-      <a href="https://lin.ee/v6xlqGl">公式LINE</a>
-    </nav>
-    <small>© 2026 KoKoRoBeing / 咲空麻美</small>
+<footer style="padding: 56px 24px 32px; background: #2A3832; color: #9FA9B0; font-size: 14px; line-height: 1.9">
+  <div style="max-width: 1120px; margin: 0 auto">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+      <div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: #F2F0EB; margin-bottom: 8px">KoKoRoBeing</div>
+        <div>頑張りすぎる心に、戻る場所を。<br>オンラインのマインドフルネス</div>
+        <div style="margin-top: 8px">主宰 咲空麻美(さくらあさみ)</div>
+      </div>
+      <nav aria-label="サイト" style="display: flex; flex-direction: column; gap: 4px">
+        <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #8A939A; margin-bottom: 4px">MENU</div>
+        <a href="../index.html" style="color: #C9CFD3; text-decoration: none">トップ</a>
+        <a href="../program-3months/index.html" style="color: #C9CFD3; text-decoration: none">三か月プログラム</a>
+        <a href="../profile/index.html" style="color: #C9CFD3; text-decoration: none">咲空麻美について</a>
+        <a href="../index.html#contact" style="color: #C9CFD3; text-decoration: none">お問い合わせ</a>
+      </nav>
+      <nav aria-label="SNS" style="display: flex; flex-direction: column; gap: 4px">
+        <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #8A939A; margin-bottom: 4px">FOLLOW</div>
+        <a href="https://lin.ee/v6xlqGl" style="color: #C9CFD3; text-decoration: none">公式LINE</a>
+        <a href="https://ameblo.jp/sakura-vp/" style="color: #C9CFD3; text-decoration: none">アメブロ</a>
+        <a href="https://note.com/sakurajpau" style="color: #C9CFD3; text-decoration: none">note</a>
+        <a href="https://www.instagram.com/asami.mindfulness/" style="color: #C9CFD3; text-decoration: none">Instagram</a>
+        <a href="https://medium.com/@sakurajpau" style="color: #C9CFD3; text-decoration: none">Medium</a>
+      </nav>
+    </div>
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #3E4D46; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px">
+      <nav aria-label="規約" style="display: flex; flex-wrap: wrap; gap: 8px 20px">
+        <a href="../legal/tokushoho.html" style="color: #C9CFD3; text-decoration: none">特定商取引法に基づく表記</a>
+        <a href="../legal/privacy.html" style="color: #C9CFD3; text-decoration: none">プライバシーポリシー</a>
+        <a href="../legal/disclaimer.html" style="color: #C9CFD3; text-decoration: none">免責事項</a>
+      </nav>
+      <small>© 2026 KoKoRoBeing / 咲空麻美</small>
+    </div>
   </div>
 </footer>
 </body>
