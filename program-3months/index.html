@@ -75,7 +75,7 @@
 body{margin:0;background:#F5F5F2}
 a{color:#33443C}a:hover{color:#3E6A5A}
 @keyframes kb-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.kb-mq:hover .kb-track{animation-play-state:paused}
+.kb-mq:hover .kb-track,.kb-mq:active .kb-track{animation-play-state:paused}
 @media (prefers-reduced-motion: reduce){.kb-track{animation:none !important}}
 summary{cursor:pointer}
 @keyframes kb-fade{0%{opacity:0}6%{opacity:1}33%{opacity:1}40%{opacity:0}100%{opacity:0}}
@@ -263,97 +263,302 @@ section[id]{scroll-margin-top:72px}
   <div style="max-width: 1120px; margin: 0 auto 44px; padding: 0 24px">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">VOICES</div>
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.5; margin: 0">受講者の声</h2>
+    <div class="kb-legend" style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin-top: 16px; font-size: 14px; color: #4A545B"><span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #3E6A5A"></span>マインドフルネス</span><span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #2F5D7C"></span>コーチング・カウンセリング</span><span style="display: inline-flex; align-items: center; gap: 6px"><span style="width: 12px; height: 12px; border-radius: 3px; background: #8A5A3C"></span>ヒプノセラピー</span></div>
   </div>
   <div class="kb-mq" style="overflow: hidden; width: 100%">
-    <div class="kb-track" style="display: flex; width: max-content; animation: kb-marquee 60s linear infinite">
+    <div class="kb-track" style="display: flex; width: max-content; animation: kb-marquee 264s linear infinite">
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">自分の中でははっきりしていなかった問題点・今後の行動を明確に認識できました。整理できたことをやるだけになったので、スッキリしました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Fさん(60代男性)<span style="color: #8A939A"> / コーチング</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">自分の中でははっきりしていなかった問題点・今後の行動を明確に認識できました。整理できたことをやるだけになったので、スッキリしました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">Fさん(60代男性)</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">受けてみて、自分が過去に繰り返していた感情の乱れの原因がわかりました。不安や恐れは自分の中にあり、周りに原因があるわけではないとわかりました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Yさん(50代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">1日の中でこんな時間を持つことがあまりないので、そんな人にこそ必要な時間なんだなと感じました。自分の心をジャッジしないで、ただ認めてあげる事が今の自分に必要な事だなと思いました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">40代女性</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">「今に意識がいない」ことで目の前にある幸せにも気づけていなかったのか…と愕然としました。問題点の焦点化がとにかく早くて正確で、モヤモヤが晴れました!</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Cさん(40代女性)<span style="color: #8A939A"> / マインドフルネス</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">受けてみて、自分が過去に繰り返していた感情の乱れの原因がわかりました。不安や恐れは自分の中にあり、周りに原因があるわけではないとわかりました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Yさん(50代女性)</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">セッションの流れがとても良いと思いました。自己紹介→悩み解決のアドバイス→癒やし。丁寧で分かりやすく、腑に落ちました。心の安定が続きそうです。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Sさん(40代女性)<span style="color: #8A939A"> / おうちdeメンテナンス</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">体験後、営業をかけられるのかなと構えてましたが、そんなことはなく、顧客志向の方なんだなとじんわり感じました。道を逸れてしまった時の誘導が合気道のように滑らかで、心地よかったです。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代男性</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">めちゃくちゃ良かったです!また受けたいです!終始安心安全な空間と、癒しボイスの誘導も絶妙でした!</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Kさん(40代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">「今に意識がいない」ことで目の前にある幸せにも気づけていなかったのか…と愕然としました。問題点の焦点化がとにかく早くて正確で、モヤモヤが晴れました!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">Cさん(40代女性)</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">心が温まりました。ブロックのある自分も含めて受け入れて、自分を好きになる。優しい麻美さんの声が心地よくて癒されました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Iさん(30代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">このモヤモヤがいつまで続くのかがはっきり見えたのがとても良かったです。他では話せない事を、麻美さんなら安心して話せることを有難いと思いました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上男性</figcaption>
         </figure>
       
-        <figure style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">麻美さんの優しい誘導と温かいお言葉にたくさん癒やされました。久しぶりにたくさん泣いて、浄化され、少し生まれ変わった気分です。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Yさん(30代女性)<span style="color: #8A939A"> / ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">めちゃくちゃ良かったです!また受けたいです!終始安心安全な空間と、癒しボイスの誘導も絶妙でした!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Kさん(40代女性)</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">自分の中でははっきりしていなかった問題点・今後の行動を明確に認識できました。整理できたことをやるだけになったので、スッキリしました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Fさん(60代男性)<span style="color: #8A939A"> / コーチング</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">ボディスキャンの時、身体と会話(対話)ができました。出来るところまでで良いですよと無理なことを強要しないので、気分が前向きになれます。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">60代以上女性</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">受けてみて、自分が過去に繰り返していた感情の乱れの原因がわかりました。不安や恐れは自分の中にあり、周りに原因があるわけではないとわかりました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Yさん(50代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">カウンセリング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">私の気持ちを引き出しながら丁寧に聞いていただけ、こんなに自分の気持ちを話す機会もなかったので、すごく嬉しかったです。あっという間の45分でした。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">20代女性</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">「今に意識がいない」ことで目の前にある幸せにも気づけていなかったのか…と愕然としました。問題点の焦点化がとにかく早くて正確で、モヤモヤが晴れました!</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Cさん(40代女性)<span style="color: #8A939A"> / マインドフルネス</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">心が温まりました。ブロックのある自分も含めて受け入れて、自分を好きになる。優しい麻美さんの声が心地よくて癒されました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Iさん(30代女性)</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">セッションの流れがとても良いと思いました。自己紹介→悩み解決のアドバイス→癒やし。丁寧で分かりやすく、腑に落ちました。心の安定が続きそうです。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Sさん(40代女性)<span style="color: #8A939A"> / おうちdeメンテナンス</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">瞑想している時にいろいろなことを考えてしまう。それが自然なんだと思えた。ほんの入口に触れただけだと思いますが、脳を休めることに興味が湧いてきました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">60代以上男性</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">めちゃくちゃ良かったです!また受けたいです!終始安心安全な空間と、癒しボイスの誘導も絶妙でした!</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Kさん(40代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">一人でやっていたら延び延びにしてしまったし、諦めていたかもと思います。丁寧な伴走をしてくれたからやれたのだと思います。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上女性</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">心が温まりました。ブロックのある自分も含めて受け入れて、自分を好きになる。優しい麻美さんの声が心地よくて癒されました。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Iさん(30代女性)<span style="color: #8A939A"> / マインドフルネス・ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">おうちdeメンテナンス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">セッションの流れがとても良いと思いました。自己紹介→悩み解決のアドバイス→癒やし。丁寧で分かりやすく、腑に落ちました。心の安定が続きそうです。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">Sさん(40代女性)</figcaption>
         </figure>
       
-        <figure aria-hidden="true" style="width: 360px; margin: 0 20px 0 0; flex: none; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 28px; box-sizing: border-box; display: flex; flex-direction: column; gap: 14px">
-          <div style="font-family: 'Jost', sans-serif; font-size: 40px; line-height: 1; color: #3E6A5A">“</div>
-          <blockquote style="margin: 0; font-size: 15px; line-height: 1.85">麻美さんの優しい誘導と温かいお言葉にたくさん癒やされました。久しぶりにたくさん泣いて、浄化され、少し生まれ変わった気分です。</blockquote>
-          <figcaption style="margin-top: auto; font-size: 13px; color: #4A545B; border-top: 1px solid #E7E6E1; padding-top: 12px">Yさん(30代女性)<span style="color: #8A939A"> / ヒプノセラピー</span></figcaption>
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">心が軽くなり、また温かくなり、これからの未来に希望が持てています。温かい愛で丸ごと包み込んでくれる感覚で、安心してお話できます。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">自分が大切にしている価値観が分かったのが、とても大きな気付きでした。自分軸に戻ってくる方法が少し分かったので、安心感があります。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">心のクリーニングセッション</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">お互いに海外在住なので、ストレートに物事を言っても大丈夫という安心感がありました。視線はフラットで、ロジカルにすすめてくださったので、理解が早くできました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">40代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">麻美さんの優しい誘導と温かいお言葉にたくさん癒やされました。久しぶりにたくさん泣いて、浄化され、少し生まれ変わった気分です。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Yさん(30代女性)</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">まずは呼吸に集中するやり方が分かりやすくてよかった。少しスッキリしました。今日決めたこと、やってみよう!とワクワクしています。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">麻美さんご自身の経験を含め、親身に相談に乗ってもらえました。母の為に何をどうするのが良いか、かなりはっきり見えてきました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上男性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">ずっと放置されていた悲しい気持ちに気がつけて、受け止めることができて嬉しかったです。心が少し明るく、軽くなった気がします。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">40代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">お話しして、難しく考えすぎていたところが少し軽くなりました。失敗してもいいから、とりあえずやってみようと思います。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">20代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">小さい頃の自分が愛おしく感じ、抱きしめてあげたくなりました。とても優しい声で誘導していただいたので、リラックスして受けることができました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Sさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">思ったこと、感じたことを少しずつ伝えるようになりました。「これ言って嫌われる?」がちょっと減った感じがします。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">50代女性</figcaption>
+        </figure>
+      
+        <figure style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">以前からヒプノセラピーのセッションは受けたいと思っていたので、初体験が友達の麻美さんにお願いできてよかったです!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Iさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">自分の中でははっきりしていなかった問題点・今後の行動を明確に認識できました。整理できたことをやるだけになったので、スッキリしました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">Fさん(60代男性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">1日の中でこんな時間を持つことがあまりないので、そんな人にこそ必要な時間なんだなと感じました。自分の心をジャッジしないで、ただ認めてあげる事が今の自分に必要な事だなと思いました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">40代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">受けてみて、自分が過去に繰り返していた感情の乱れの原因がわかりました。不安や恐れは自分の中にあり、周りに原因があるわけではないとわかりました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Yさん(50代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">体験後、営業をかけられるのかなと構えてましたが、そんなことはなく、顧客志向の方なんだなとじんわり感じました。道を逸れてしまった時の誘導が合気道のように滑らかで、心地よかったです。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代男性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">「今に意識がいない」ことで目の前にある幸せにも気づけていなかったのか…と愕然としました。問題点の焦点化がとにかく早くて正確で、モヤモヤが晴れました!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">Cさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">このモヤモヤがいつまで続くのかがはっきり見えたのがとても良かったです。他では話せない事を、麻美さんなら安心して話せることを有難いと思いました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上男性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">めちゃくちゃ良かったです!また受けたいです!終始安心安全な空間と、癒しボイスの誘導も絶妙でした!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Kさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">ボディスキャンの時、身体と会話(対話)ができました。出来るところまでで良いですよと無理なことを強要しないので、気分が前向きになれます。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">60代以上女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">カウンセリング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">私の気持ちを引き出しながら丁寧に聞いていただけ、こんなに自分の気持ちを話す機会もなかったので、すごく嬉しかったです。あっという間の45分でした。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">20代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">心が温まりました。ブロックのある自分も含めて受け入れて、自分を好きになる。優しい麻美さんの声が心地よくて癒されました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Iさん(30代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">マインドフルネス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">瞑想している時にいろいろなことを考えてしまう。それが自然なんだと思えた。ほんの入口に触れただけだと思いますが、脳を休めることに興味が湧いてきました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">60代以上男性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">一人でやっていたら延び延びにしてしまったし、諦めていたかもと思います。丁寧な伴走をしてくれたからやれたのだと思います。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #3E6A5A14; border: 1px solid #3E6A5A55; border-left: 6px solid #3E6A5A; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF">おうちdeメンテナンス</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #3E6A5A; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">セッションの流れがとても良いと思いました。自己紹介→悩み解決のアドバイス→癒やし。丁寧で分かりやすく、腑に落ちました。心の安定が続きそうです。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #3E6A5A; border-top: 1px solid #3E6A5A33; padding-top: 10px">Sさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">心が軽くなり、また温かくなり、これからの未来に希望が持てています。温かい愛で丸ごと包み込んでくれる感覚で、安心してお話できます。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">自分が大切にしている価値観が分かったのが、とても大きな気付きでした。自分軸に戻ってくる方法が少し分かったので、安心感があります。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">心のクリーニングセッション</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">お互いに海外在住なので、ストレートに物事を言っても大丈夫という安心感がありました。視線はフラットで、ロジカルにすすめてくださったので、理解が早くできました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">40代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">麻美さんの優しい誘導と温かいお言葉にたくさん癒やされました。久しぶりにたくさん泣いて、浄化され、少し生まれ変わった気分です。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Yさん(30代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">マインドフルネス・コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">まずは呼吸に集中するやり方が分かりやすくてよかった。少しスッキリしました。今日決めたこと、やってみよう!とワクワクしています。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">30代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">麻美さんご自身の経験を含め、親身に相談に乗ってもらえました。母の為に何をどうするのが良いか、かなりはっきり見えてきました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">60代以上男性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">ずっと放置されていた悲しい気持ちに気がつけて、受け止めることができて嬉しかったです。心が少し明るく、軽くなった気がします。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">40代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #2F5D7C14; border: 1px solid #2F5D7C55; border-left: 6px solid #2F5D7C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #2F5D7C; color: #FFFFFF">コーチング</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #2F5D7C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">お話しして、難しく考えすぎていたところが少し軽くなりました。失敗してもいいから、とりあえずやってみようと思います。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #2F5D7C; border-top: 1px solid #2F5D7C33; padding-top: 10px">20代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">小さい頃の自分が愛おしく感じ、抱きしめてあげたくなりました。とても優しい声で誘導していただいたので、リラックスして受けることができました。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Sさん(40代女性)</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">マインドフルネス・ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">思ったこと、感じたことを少しずつ伝えるようになりました。「これ言って嫌われる?」がちょっと減った感じがします。</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">50代女性</figcaption>
+        </figure>
+      
+        <figure aria-hidden="true" style="width: 340px; margin: 0 24px 0 0; flex: none; background: #8A5A3C14; border: 1px solid #8A5A3C55; border-left: 6px solid #8A5A3C; border-radius: 8px; padding: 22px 24px 24px; box-sizing: border-box; display: flex; flex-direction: column; gap: 12px">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 12px"><span style="font-size: 13px; font-weight: 700; line-height: 1.5; padding: 4px 12px; border-radius: 999px; background: #8A5A3C; color: #FFFFFF">ヒプノセラピー</span><span aria-hidden="true" style="font-family: 'Jost', sans-serif; font-size: 44px; line-height: 0.6; color: #8A5A3C; opacity: 0.5">“</span></div>
+          <blockquote style="margin: 0; font-size: 15.5px; line-height: 1.85; color: #1E2328">以前からヒプノセラピーのセッションは受けたいと思っていたので、初体験が友達の麻美さんにお願いできてよかったです!</blockquote>
+          <figcaption style="margin-top: auto; font-size: 13px; font-weight: 700; color: #8A5A3C; border-top: 1px solid #8A5A3C33; padding-top: 10px">Iさん(40代女性)</figcaption>
         </figure>
       
     </div>
   </div>
-  <div style="max-width: 1120px; margin: 16px auto 0; padding: 0 24px; font-size: 13px; color: #5B6770">※個別セッション・体験会でいただいたご感想です。カーソルを乗せると止まります。</div>
+  <div style="max-width: 1120px; margin: 16px auto 0; padding: 0 24px; font-size: 13px; color: #5B6770">※個別セッション・体験会でいただいたご感想です。カーソルを乗せる(スマホは指で押さえる)と止まります。</div>
 </section>
 
 <section style="padding: 104px 24px; background: #FFFFFF">
@@ -376,6 +581,9 @@ section[id]{scroll-margin-top:72px}
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700">マインドフルネスや瞑想が初めてでも参加できますか?</summary><p style="margin: 12px 0 0; color: #4A545B">はい。呼吸に意識を向けるところから、一つずつご案内します。経験は必要ありません。</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700">どこで受けられますか?</summary><p style="margin: 12px 0 0; color: #4A545B">すべてオンラインです。ご自宅など、落ち着ける場所からご参加ください。</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">男性も参加できますか?</summary><p style="margin: 12px 0 0; color: #4A545B">はい。性別や年齢に関係なく、どなたでもご参加いただけます。</p></details>
+      <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">カメラはオンにしないといけませんか?</summary><p style="margin: 12px 0 0; color: #4A545B">カメラはオンだと嬉しいですが、オフでも大丈夫です。ご自身の居心地を優先してください。</p></details>
+      <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">声を出して話すのが苦手です。</summary><p style="margin: 12px 0 0; color: #4A545B">マイクでお話しいただいても、チャットに文字で書いていただいても大丈夫です。話しやすい方法をお選びください。</p></details>
+      <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">無料体験のキャンセルや日程の変更はできますか?</summary><p style="margin: 12px 0 0; color: #4A545B">はい。前々日の20時(日本時間)までにご連絡ください。</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">海外に住んでいても参加できますか?</summary><p style="margin: 12px 0 0; color: #4A545B">はい。オンラインなので、海外からもご参加いただけます。予約ページは、お住まいの地域の時間で表示されます。</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">仕事が忙しくても続けられますか?</summary><p style="margin: 12px 0 0; color: #4A545B">毎朝の音声配信は、忙しい朝でも続けやすい短い内容です。グループセッションや個別カウンセリングは、ペースに合わせて進めます。</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700">自分に合うかわかりません。</summary><p style="margin: 12px 0 0; color: #4A545B">まずは無料体験セッション(20分)で、今のお悩みをお聞かせください。合うかどうかを確かめてからお決めいただけます。</p></details>
