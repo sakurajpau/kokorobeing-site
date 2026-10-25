@@ -23,7 +23,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" as="image" href="../images/hero_forest_light.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="../images/hero_sunset_beach.jpg" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -80,6 +80,7 @@ a{color:#33443C}a:hover{color:#3E6A5A}
 @keyframes kb-drift{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.14) translate(-2%,-1.5%)}}
 @media (prefers-reduced-motion: reduce){.kb-slide,.kb-drift{animation:none !important}.kb-slide:first-child{opacity:1 !important}}
 section[id]{scroll-margin-top:72px}
+@media (min-width: 761px){.kb-cta{justify-content:flex-end}}
 @media (max-width: 760px){header{position:sticky}header>div{padding:10px 16px !important;gap:4px !important}header nav{flex-wrap:nowrap !important;overflow-x:auto;width:100%;gap:18px !important;padding-bottom:4px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a{white-space:nowrap}header>div{position:relative}header nav a[lang]{position:absolute;top:12px;right:16px;background:#F5F5F2}}
 </style>
 </head>
@@ -104,16 +105,14 @@ section[id]{scroll-margin-top:72px}
 
 <section id="top" style="position: relative; overflow: hidden; background: #1C2420; color: #FFFFFF; min-height: 640px; display: flex; align-items: center">
   <div aria-hidden="true" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%">
-    <img class="kb-slide" src="../images/hero_forest_light.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; animation: kb-fade 21s linear 0s infinite, kb-zoom 21s ease-in-out 0s infinite">
-    <img class="kb-slide" src="../images/lp_moss_forest.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; animation: kb-fade 21s linear 7s infinite, kb-zoom 21s ease-in-out 7s infinite">
-    <img class="kb-slide" src="../images/lp_roots_light.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block; opacity: 0; animation: kb-fade 21s linear 14s infinite, kb-zoom 21s ease-in-out 14s infinite">
+    <img class="kb-drift kb-hero" src="../images/hero_sunset_beach.jpg" alt="" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; object-position: 22% 75%; display: block; animation: kb-drift 30s ease-in-out infinite alternate">
   </div>
-  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(16,22,19,0.52)"></div>
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(16,22,19,0.62) 0%, rgba(16,22,19,0.38) 55%, rgba(16,22,19,0.12) 100%)"></div>
   <div style="position: relative; width: 100%; max-width: 1120px; margin: 0 auto; padding: 120px 24px; box-sizing: border-box">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #CFE3D8; margin-bottom: 24px">KOKOROBEING — MINDFULNESS</div>
     <h1 style="font-weight: 700; font-size: clamp(32px, 5vw, 56px); line-height: 1.3; letter-spacing: 0.01em; margin: 0 0 28px; color: #FFFFFF">I want to create<br>a home for the mind.</h1>
     <p style="max-width: 580px; margin: 0 0 40px; color: #E6EBE8">Connect in a place where your mind can rest, then return to your own everyday life. KoKoRoBeing is an online mindfulness space for people who tend to try too hard, at work and in relationships, to come back to the present moment, even while still feeling unsettled.</p>
-    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
+    <div class="kb-cta" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
       <a href="https://calendar.app.google/6E74VohACt26ZsPUA" style="display: inline-block; padding: 18px 36px; border-radius: 6px; background: #3E6A5A; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.02em">Book a free trial session</a>
       <span style="font-size: 13px; color: #CBD3CE">Online · 20 minutes · Free</span>
     </div>
