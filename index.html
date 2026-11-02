@@ -101,7 +101,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;family=Jost:wght@400;500&amp;family=Shippori+Mincho:wght@500;600&amp;display=swap" rel="stylesheet">
 <style>
-body{margin:0;background:#F5F5F2}
+body{margin:0;background:#FFFFFF}
 a{color:#33443C}a:hover{color:#3E6A5A}
 @keyframes kb-marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .kb-mq:hover .kb-track,.kb-mq:active .kb-track{animation-play-state:paused}
@@ -111,28 +111,42 @@ a{color:#33443C}a:hover{color:#3E6A5A}
 @keyframes kb-drift{from{transform:scale(1.02) translate(0,0)}to{transform:scale(1.14) translate(-2%,-1.5%)}}
 @media (prefers-reduced-motion: reduce){.kb-slide,.kb-drift{animation:none !important}.kb-slide:first-child{opacity:1 !important}}
 section[id]{scroll-margin-top:72px}
+.kb-navi{display:inline-flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;line-height:1.4}
+.kb-navi svg{width:22px;height:22px}
+header{transition:box-shadow .3s}
+header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
+.kb-car-track{position:relative;display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;padding:18px 10px 26px;scrollbar-width:none}
+.kb-car-track::-webkit-scrollbar{display:none}
+.kb-card{flex:0 0 290px;scroll-snap-align:center;border-radius:22px;padding:30px 26px;min-height:230px;box-sizing:border-box;box-shadow:0 10px 26px rgba(30,35,40,0.09);transition:transform .4s}
+.kb-card:nth-child(odd){transform:rotate(-1.6deg)}.kb-card:nth-child(even){transform:rotate(1.6deg)}
+.kb-card:hover{transform:rotate(0) translateY(-4px)}
+.kb-car-ctrl{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:6px}
+.kb-car-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:#C5CCC8;cursor:pointer}
+.kb-car-dot[aria-current="true"]{background:#3E6A5A;width:22px;border-radius:999px}
+.kb-car-pause{margin-left:14px;width:30px;height:30px;border-radius:50%;border:0;background:#33443C;color:#FFFFFF;font-size:11px;cursor:pointer}
+@media (prefers-reduced-motion: reduce){.kb-card{transition:none}}
 #top p,.kb-scenes{text-shadow:0 1px 4px rgba(0,0,0,0.6)}
 .kb-em{font-weight:700;color:#3E6A5A}
 @media (max-width: 760px){#about p,#profile p,#mindfulness p{margin-bottom:22px !important;line-height:2}#about h3,#profile h2{margin-top:8px !important}}
 @media (min-width: 761px){.kb-cta{justify-content:flex-end}}
-@media (max-width: 760px){header{position:sticky}header>div{padding:10px 16px !important;gap:4px !important}header nav{flex-wrap:nowrap !important;overflow-x:auto;width:100%;gap:18px !important;padding-bottom:4px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a{white-space:nowrap}header>div{position:relative}header nav a[lang]{position:absolute;top:12px;right:16px;background:#F5F5F2}}
+@media (max-width: 760px){header{position:sticky}header>div{padding:10px 16px !important;gap:4px !important}header nav{flex-wrap:nowrap !important;overflow-x:auto;width:100%;gap:18px !important;padding-bottom:4px;scrollbar-width:none}header nav::-webkit-scrollbar{display:none}header nav a{white-space:nowrap}header>div{position:relative}header nav a[lang]{position:absolute;top:12px;right:16px;background:#FFFFFF}}
 </style>
 </head>
 <body>
-<div style="width: 100%; background: #F5F5F2; color: #1E2328; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; line-height: 1.9">
+<div style="width: 100%; background: #FFFFFF; color: #1E2328; font-family: 'Zen Kaku Gothic New', sans-serif; font-size: 16px; line-height: 1.9">
 
-<header style="position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; border-bottom: 1px solid #DADAD4; background: rgba(245,245,242,0.96); color: #26292B">
+<header style="position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; border-bottom: 1px solid #E2E7E4; background: rgba(255,255,255,0.96); color: #26292B">
   <div style="max-width: 1120px; margin: 0 auto; padding: 16px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
     <a href="#top" style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: 0.12em; color: #26292B; text-decoration: none">KoKoRoBeing</a>
-    <nav aria-label="メインメニュー" style="display: flex; flex-wrap: wrap; gap: 24px; font-size: 14px">
-      <a href="#about" style="color: #555B5E; text-decoration: none">KoKoRoBeingとは</a>
-      <a href="#mindfulness" style="color: #555B5E; text-decoration: none">マインドフルネス</a>
-      <a href="#programs" style="color: #555B5E; text-decoration: none">プログラム</a>
-      <a href="program-3months/index.html" style="color: #3E6A5A; text-decoration: none; font-weight: 700">三か月プログラム(準備中)→</a>
-      <a href="#blog" style="color: #555B5E; text-decoration: none">ブログ</a>
-      <a href="#profile" style="color: #555B5E; text-decoration: none">主宰者</a>
-      <a href="#voices" style="color: #555B5E; text-decoration: none">受講者の声</a>
-      <a href="#contact" style="color: #555B5E; text-decoration: none">お問い合わせ</a>
+    <nav aria-label="メインメニュー" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-size: 14px">
+      <a href="#about" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l7-7"/></svg><span>KoKoRoBeingとは</span></a>
+      <a href="#mindfulness" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>マインドフルネス</span></a>
+      <a href="#programs" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>プログラム</span></a>
+      <a href="program-3months/index.html" class="kb-navi" style="color: #3E6A5A; text-decoration: none; font-weight: 700"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20v-8"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 12c0-4 3-6 7-6 0 4-3 6-7 6z"/></svg><span>三か月プログラム(準備中)→</span></a>
+      <a href="#blog" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/></svg><span>ブログ</span></a>
+      <a href="#profile" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></svg><span>主宰者</span></a>
+      <a href="#voices" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/></svg><span>受講者の声</span></a>
+      <a href="#contact" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>お問い合わせ</span></a>
       <a href="en/index.html" lang="en" hreflang="en" style="color: #555B5E; text-decoration: none; border: 1px solid #B9BDB8; border-radius: 999px; padding: 0 12px">English</a>
     </nav>
   </div>
@@ -154,9 +168,10 @@ section[id]{scroll-margin-top:72px}
       <span style="font-size: 13px; color: #CBD3CE">オンライン・20分・無料</span>
     </div>
   </div>
+  <div style="position: absolute; right: 16px; bottom: 12px; font-size: 11px; letter-spacing: 0.04em; color: rgba(255,255,255,0.78); text-shadow: 0 1px 3px rgba(0,0,0,0.6)">Photo: @KokoroBeing / Port Lincoln, South Australia, Australia</div>
 </section>
 
-<section style="background: #E7E6E1; padding: 40px 24px">
+<section style="background: #EEF4F0; padding: 40px 24px">
   <div style="max-width: 1120px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px">
     <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-family: 'Jost', sans-serif; font-size: 28px; color: #3E6A5A">01</span><span style="font-weight: 500">頭ではなく、体から整える</span></div>
     <div style="display: flex; gap: 14px; align-items: baseline"><span style="font-family: 'Jost', sans-serif; font-size: 28px; color: #3E6A5A">02</span><span style="font-weight: 500">毎朝の短い習慣で続ける</span></div>
@@ -195,7 +210,7 @@ section[id]{scroll-margin-top:72px}
   </div>
 </section>
 
-<section id="mindfulness" style="padding: 104px 24px; background: #ECEBE6">
+<section id="mindfulness" style="padding: 104px 24px; background: #F4F7F5">
   <div style="max-width: 1120px; margin: 0 auto">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">MINDFULNESS</div>
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.5; margin: 0 0 28px">マインドフルネスとは</h2>
@@ -205,7 +220,7 @@ section[id]{scroll-margin-top:72px}
         <p style="margin: 0 0 14px">私たちの頭の中は、気づかないうちに「自動運転」になっています。終わった会話をくり返し思い出したり、まだ起きていないことを心配したり。体はここにいるのに、心は過去や未来に出かけています。</p>
         <p style="margin: 0">マインドフルネスは、その自動運転に気づいて、「今、ここ」に戻ってくる練習です。特別な道具も、宗教も、経験もいりません。呼吸ひとつから始められます。</p>
       </div>
-      <div style="flex: 1 1 320px; background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 26px 24px">
+      <div style="flex: 1 1 320px; background: #FFFFFF; border: 1px solid #E2E7E4; border-radius: 6px; padding: 26px 24px">
         <h3 style="font-weight: 700; font-size: 20px; line-height: 1.5; margin: 0 0 8px">研究でわかっていること</h3>
         <p style="margin: 0 0 10px; font-size: 15px">47の研究(参加者3,515人)をまとめた2014年の分析では、マインドフルネス瞑想のプログラムに、不安・気分の落ちこみ・痛みを<b>少しやわらげる効果</b>が見られました(根拠の強さは「中程度」)。</p>
         <p style="margin: 0 0 10px; font-size: 15px">一方で、薬や他の心理療法よりも優れているという結果ではありませんでした。KoKoRoBeingでは、マインドフルネスを「治療」ではなく、毎日を少し楽にする「習慣」としてお伝えしています。</p>
@@ -213,12 +228,32 @@ section[id]{scroll-margin-top:72px}
       </div>
     </div>
     <h3 style="font-weight: 700; font-size: 20px; line-height: 1.5; margin: 0 0 8px">KoKoRoBeingでの実践</h3>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px">
-      <div style="background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 26px 24px"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">BREATH</div><div style="font-weight: 700; margin-bottom: 6px">呼吸に戻る</div><div style="color: #4A545B; font-size: 15px">吸う息と吐く息に気づくことから。いつでも、どこでも戻れる場所です。</div></div>
-      <div style="background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 26px 24px"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">BODY</div><div style="font-weight: 700; margin-bottom: 6px">体の感覚に気づく</div><div style="color: #4A545B; font-size: 15px">肩や足の裏など、体の感覚から心の状態に気づきます(ソマティックなアプローチ)。</div></div>
-      <div style="background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 26px 24px"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">WRITING</div><div style="font-weight: 700; margin-bottom: 6px">書いて整える</div><div style="color: #4A545B; font-size: 15px">感じたことを短く書き出して、頭の中を整理します(ジャーナリング)。</div></div>
-      <div style="background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 26px 24px"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">DAILY</div><div style="font-weight: 700; margin-bottom: 6px">日常の中で続ける</div><div style="color: #4A545B; font-size: 15px">歩く、食べる、話す。特別な時間でなく、毎日の中で「今」に戻る練習をします。</div></div>
+    <div class="kb-car-track" role="region" aria-label="KoKoRoBeingでの実践" tabindex="0">
+      <div class="kb-card" style="background: #E3EFEA"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">BREATH</div><div style="font-weight: 700; margin-bottom: 6px">呼吸に戻る</div><div style="color: #4A545B; font-size: 15px">吸う息と吐く息に気づくことから。いつでも、どこでも戻れる場所です。</div></div>
+      <div class="kb-card" style="background: #E4ECF3"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">BODY</div><div style="font-weight: 700; margin-bottom: 6px">体の感覚に気づく</div><div style="color: #4A545B; font-size: 15px">肩や足の裏など、体の感覚から心の状態に気づきます(ソマティックなアプローチ)。</div></div>
+      <div class="kb-card" style="background: #F3EAE1"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">WRITING</div><div style="font-weight: 700; margin-bottom: 6px">書いて整える</div><div style="color: #4A545B; font-size: 15px">感じたことを短く書き出して、頭の中を整理します(ジャーナリング)。</div></div>
+      <div class="kb-card" style="background: #ECE8F2"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">DAILY</div><div style="font-weight: 700; margin-bottom: 6px">日常の中で続ける</div><div style="color: #4A545B; font-size: 15px">歩く、食べる、話す。特別な時間でなく、毎日の中で「今」に戻る練習をします。</div></div>
     </div>
+    <div class="kb-car-ctrl"><button type="button" class="kb-car-dot" aria-label="1枚目を見る"></button><button type="button" class="kb-car-dot" aria-label="2枚目を見る"></button><button type="button" class="kb-car-dot" aria-label="3枚目を見る"></button><button type="button" class="kb-car-dot" aria-label="4枚目を見る"></button><button type="button" class="kb-car-pause" aria-pressed="false" aria-label="一時停止" data-pause="一時停止" data-play="再生">❚❚</button></div>
+<script>
+(function(){
+  var t = document.querySelector('.kb-car-track'); if (!t) return;
+  var cards = [].slice.call(t.children), dots = [].slice.call(document.querySelectorAll('.kb-car-dot')), btn = document.querySelector('.kb-car-pause');
+  var i = 0, hover = false, paused = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function go(n){ i = (n + cards.length) % cards.length; var c = cards[i]; t.scrollTo({ left: c.offsetLeft - (t.clientWidth - c.offsetWidth) / 2, behavior: 'smooth' }); }
+  function mark(){ var mid = t.scrollLeft + t.clientWidth / 2, best = 0, d = 1e9;
+    cards.forEach(function(c, k){ var m = Math.abs(c.offsetLeft + c.offsetWidth / 2 - mid); if (m < d) { d = m; best = k; } });
+    i = best; dots.forEach(function(x, k){ x.setAttribute('aria-current', k === best ? 'true' : 'false'); }); }
+  t.addEventListener('scroll', function(){ clearTimeout(t._s); t._s = setTimeout(mark, 80); });
+  dots.forEach(function(x, k){ x.addEventListener('click', function(){ go(k); }); });
+  btn.addEventListener('click', function(){ paused = !paused; btn.setAttribute('aria-pressed', paused ? 'true' : 'false'); btn.textContent = paused ? '▶' : '❚❚'; btn.setAttribute('aria-label', paused ? btn.dataset.play : btn.dataset.pause); });
+  t.addEventListener('mouseenter', function(){ hover = true; }); t.addEventListener('mouseleave', function(){ hover = false; });
+  t.addEventListener('touchstart', function(){ hover = true; }, { passive: true }); t.addEventListener('touchend', function(){ setTimeout(function(){ hover = false; }, 3000); });
+  setInterval(function(){ if (!paused && !hover && !document.hidden) go(i + 1); }, 4500);
+  var h = document.querySelector('header'); window.addEventListener('scroll', function(){ h.classList.toggle('kb-scrolled', window.scrollY > 40); }, { passive: true });
+  mark();
+})();
+</script>
   </div>
 </section>
 
@@ -228,7 +263,7 @@ section[id]{scroll-margin-top:72px}
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.5; margin: 0 0 12px">プログラム</h2>
     <p style="margin: 0 0 44px; color: #4A545B">まずは無料体験セッションから。必要に応じて、個別セッションや3ヶ月のプログラムへ。</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px">
-      <div style="border: 1px solid #DADAD4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #F5F5F2">
+      <div style="border: 1px solid #E2E7E4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #F4F7F5">
         <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #5B6770">STEP 01</div>
         <h3 style="font-weight: 700; font-size: 21px; margin: 0">無料体験セッション</h3>
         <div style="font-size: 14px; color: #4A545B">個別・オンライン・20分・無料</div>
@@ -236,7 +271,7 @@ section[id]{scroll-margin-top:72px}
         <ul style="margin: 0 0 8px; padding-left: 1.2em; font-size: 14px; color: #4A545B"><li style="margin-bottom: 4px">カメラはオンだと嬉しいですが、オフでも大丈夫です。ご自身の居心地を優先してください。</li><li style="margin-bottom: 4px">セッション中のお話は、マイクでも、チャットの文字でも大丈夫です。</li><li style="margin-bottom: 4px">話したくないことは、無理に話さなくて大丈夫です。</li><li style="margin-bottom: 4px">うまく言葉にできなくても大丈夫です。</li><li style="margin-bottom: 4px">体験のあと、続けるかどうかはご自身で決めていただけます。</li><li style="margin-bottom: 4px">キャンセル・日程変更は、前々日の20時(日本時間)までにお願いしています。</li></ul>
         <a href="https://calendar.app.google/6E74VohACt26ZsPUA" style="margin-top: auto; font-weight: 700">予約する →</a>
       </div>
-      <div style="border: 1px solid #DADAD4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #F5F5F2">
+      <div style="border: 1px solid #E2E7E4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #F4F7F5">
         <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #5B6770">1 ON 1</div>
         <h3 style="font-weight: 700; font-size: 21px; margin: 0">個別セッション</h3>
         <div style="font-size: 14px; color: #4A545B">個別・オンライン・60分・8,800円(税込)</div>
@@ -254,7 +289,7 @@ section[id]{scroll-margin-top:72px}
         <a href="program-3months/index.html" style="margin-top: auto; font-weight: 700; color: #FFFFFF">詳しく見る →</a>
       </div>
     </div>
-    <p style="margin: 24px 0 0; padding: 16px 20px; border-radius: 6px; background: #F5F5F2; border: 1px dashed #B9BDB8">日本に帰国するタイミングで、対面(リアル)の講座のご相談も受け付けています。<a href="#contact" style="font-weight: 700">お問い合わせ</a>からお気軽にどうぞ。</p>
+    <p style="margin: 24px 0 0; padding: 16px 20px; border-radius: 6px; background: #F4F7F5; border: 1px dashed #B9BDB8">日本に帰国するタイミングで、対面(リアル)の講座のご相談も受け付けています。<a href="#contact" style="font-weight: 700">お問い合わせ</a>からお気軽にどうぞ。</p>
   </div>
 </section>
 
@@ -652,16 +687,16 @@ section[id]{scroll-margin-top:72px}
   </div>
 </section>
 
-<section id="contact" style="padding: 96px 24px; background: #FFFFFF; border-top: 1px solid #DADAD4">
+<section id="contact" style="padding: 96px 24px; background: #FFFFFF; border-top: 1px solid #E2E7E4">
   <div style="max-width: 1120px; margin: 0 auto">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">CONTACT</div>
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.5; margin: 0 0 12px">お問い合わせ</h2>
     <p style="margin: 0 0 40px; color: #4A545B">セッションやプログラムについて、気になることがあればお気軽にどうぞ。</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 20px">
-      <div style="border: 1px solid #DADAD4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; background: #F5F5F2">
+      <div style="border: 1px solid #E2E7E4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; background: #F4F7F5">
         <h3 style="font-weight: 700; font-size: 20px; margin: 0">公式LINE「KoKoRoBeing」</h3>
         <p style="margin: 0; color: #4A545B">ちょっとした質問や、講座・プログラムのお知らせはLINEで受け取れます。</p>
-        <div style="background: #FFFFFF; border: 1px solid #DADAD4; border-radius: 6px; padding: 14px 18px; font-size: 15px">
+        <div style="background: #FFFFFF; border: 1px solid #E2E7E4; border-radius: 6px; padding: 14px 18px; font-size: 15px">
           <div style="font-weight: 700; margin-bottom: 4px">友だち登録プレゼント</div>
           <ul style="margin: 0; padding-left: 1.3em; color: #4A545B">
             <li>わたしの頑張りすぎタイプチェック</li>
@@ -671,7 +706,7 @@ section[id]{scroll-margin-top:72px}
         </div>
         <a href="https://lin.ee/v6xlqGl" style="margin-top: 8px; align-self: flex-start; display: inline-block; padding: 16px 28px; border-radius: 6px; background: #06C755; color: #FFFFFF; text-decoration: none; font-weight: 700">LINEで友だち追加する</a>
       </div>
-      <div style="border: 1px solid #DADAD4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; background: #F5F5F2">
+      <div style="border: 1px solid #E2E7E4; border-radius: 6px; padding: 32px 28px; display: flex; flex-direction: column; gap: 12px; background: #F4F7F5">
         <h3 style="font-weight: 700; font-size: 20px; margin: 0">お問い合わせフォーム</h3>
         <p style="margin: 0; color: #4A545B">LINEを使っていない方は、こちらのフォームからご連絡ください。</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLScxJ_W9RAmWUGhdx2BaLH9bt9x45SNqU6zPx2fLkej_Wj4ybA/viewform" style="margin-top: 8px; align-self: flex-start; display: inline-block; padding: 15px 28px; border-radius: 6px; border: 1px solid #3E6A5A; color: #3E6A5A; text-decoration: none; font-weight: 700; background: #FFFFFF">フォームを開く</a>
