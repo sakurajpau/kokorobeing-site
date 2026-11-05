@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>A Home for the Mind | Online Mindfulness with KoKoRoBeing (Asami Sakura)</title>
+<title>Online Mindfulness &amp; Meditation, Free 20-Minute Trial | KoKoRoBeing (Asami Sakura)</title>
 <link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
 <meta name="description" content="For people who try too hard at work and in relationships. KoKoRoBeing, led by Australia-based mindfulness instructor Asami Sakura, offers online mindfulness: a free 20-minute trial session, individual sessions and a 3-month program. Join from anywhere.">
 <meta name="author" content="Asami Sakura">
@@ -94,6 +94,13 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
 .kb-car-dot[aria-current="true"]{background:#3E6A5A;width:22px;border-radius:999px}
 .kb-car-pause{margin-left:14px;width:30px;height:30px;border-radius:50%;border:0;background:#33443C;color:#FFFFFF;font-size:11px;cursor:pointer}
 @media (prefers-reduced-motion: reduce){.kb-card{transition:none}}
+.kb-catch{font-weight:700;font-size:clamp(22px,3.2vw,30px);line-height:1.6;margin:0 0 14px;color:#1E2328}
+details.kb-more{margin:6px 0 18px}
+details.kb-more>summary{display:inline-block;cursor:pointer;font-weight:700;font-size:14px;color:#3E6A5A;border:1px solid #3E6A5A;border-radius:999px;padding:6px 18px;list-style:none}
+details.kb-more>summary::-webkit-details-marker{display:none}
+details.kb-more>summary::after{content:" +"}
+details.kb-more[open]>summary::after{content:" −"}
+details.kb-more[open]>summary{margin-bottom:16px}
 #top p,.kb-scenes{text-shadow:0 1px 4px rgba(0,0,0,0.6)}
 .kb-em{font-weight:700;color:#3E6A5A}
 @media (max-width: 760px){#about p,#profile p,#mindfulness p{margin-bottom:22px !important;line-height:2}#about h3,#profile h2{margin-top:8px !important}}
@@ -109,9 +116,7 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
     <a href="#top" style="font-family: 'Jost', sans-serif; font-weight: 500; font-size: 20px; letter-spacing: 0.12em; color: #26292B; text-decoration: none; display: inline-flex; align-items: center; gap: 10px" aria-label="KoKoRoBeing"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 40 40" style="flex: none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#3E6A5A" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#C9A35B"/></svg><span><span style="color: #3E6A5A">KoKoRo</span>Being</span></a>
     <nav aria-label="Main menu" style="display: flex; flex-wrap: wrap; align-items: center; gap: 22px; font-size: 14px">
       <a href="#about" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c0-8 6-14 14-14 0 8-6 14-14 14z"/><path d="M5 19l7-7"/></svg><span>About</span></a>
-      <a href="#mindfulness" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg><span>Mindfulness</span></a>
       <a href="#programs" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><span>Programs</span></a>
-      <a href="#blog" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l4-1 11-11-3-3L5 16l-1 4z"/></svg><span>Blog</span></a>
       <a href="#profile" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 20c1-4 4-6 8-6s7 2 8 6"/></svg><span>Founder</span></a>
       <a href="#voices" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v11H9l-5 4V5z"/></svg><span>Voices</span></a>
       <a href="#contact" class="kb-navi" style="color: #555B5E; text-decoration: none"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span>Contact</span></a>
@@ -127,15 +132,14 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
   <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(90deg, rgba(16,22,19,0.62) 0%, rgba(16,22,19,0.38) 55%, rgba(16,22,19,0.12) 100%)"></div>
   <div style="position: relative; width: 100%; max-width: 1120px; margin: 0 auto; padding: 120px 24px; box-sizing: border-box">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #CFE3D8; margin-bottom: 24px">KOKOROBEING — MINDFULNESS</div>
-    <h1 style="font-weight: 700; font-size: clamp(32px, 5vw, 56px); line-height: 1.3; letter-spacing: 0.01em; margin: 0 0 28px; color: #FFFFFF">I want to create<br>a home for the mind.</h1>
-    <p style="max-width: 580px; margin: 0 0 40px; color: #E6EBE8">Connect in a place where your mind can rest, then return to your own everyday life. KoKoRoBeing is an online mindfulness space for people who tend to try too hard, at work and in relationships, to come back to the present moment, even while still feeling unsettled.</p>
+    <h1 style="font-weight: 700; font-size: clamp(32px, 5vw, 56px); line-height: 1.3; letter-spacing: 0.01em; margin: 0 0 28px; color: #FFFFFF">When things are hard,<br>a place to say so.</h1>
+    <p style="max-width: 580px; margin: 0 0 40px; color: #E6EBE8"><span style="font-size: 1.15em; font-weight: 700; color: #FFFFFF">I want to create a home for the mind.</span><br>For people who tend to try too hard: an online mindfulness space where you can come back to the present moment.</p>
     <ul class="kb-scenes" style="list-style: none; margin: -20px 0 36px; padding: 0; display: flex; flex-direction: column; gap: 6px; max-width: 560px; font-size: 15px; color: #E6EBE8"><li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #8FC1AC">—</span><span>You can’t say no, and before you know it you’re carrying too much work</span></li><li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #8FC1AC">—</span><span>Even at home, a comment from work keeps replaying in your head</span></li><li style="display: flex; gap: 10px; align-items: baseline"><span aria-hidden="true" style="color: #8FC1AC">—</span><span>You’re supposed to be resting, but your body still feels tired</span></li></ul>
     <div class="kb-cta" style="display: flex; flex-wrap: wrap; align-items: center; gap: 20px">
       <a href="https://calendar.app.google/6E74VohACt26ZsPUA" style="display: inline-block; padding: 18px 36px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF; text-decoration: none; font-weight: 700; letter-spacing: 0.02em">Book a free trial session</a>
-      <span style="font-size: 13px; color: #CBD3CE">Online · 20 minutes · Free</span>
+      <span style="font-size: 13px; color: #CBD3CE">Online · 20 minutes · Free<br><b style="color: #FFFFFF; font-size: 14px">More than 890 participants so far</b></span>
     </div>
   </div>
-  <div style="position: absolute; right: 16px; bottom: 12px; font-size: 11px; letter-spacing: 0.04em; color: rgba(255,255,255,0.78); text-shadow: 0 1px 3px rgba(0,0,0,0.6)">Photo: @KokoroBeing / Port Lincoln, South Australia, Australia</div>
 </section>
 
 <section style="background: #EEF4F0; padding: 40px 24px">
@@ -152,6 +156,9 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.4; margin: 0 0 28px">What is KoKoRoBeing?</h2>
     <div style="display: flex; flex-wrap: wrap; gap: 48px">
       <div style="flex: 999 1 460px; min-width: 0">
+        <p class="kb-catch">It is fine to waver. It is fine to feel out of balance.<br>A place you can come back to yourself, again and again.</p>
+        <p style="margin: 0 0 18px; color: #4A545B">KoKoRo means “mind” in Japanese. Being means simply being who you are.</p>
+        <details class="kb-more"><summary>Read more</summary>
         <h3 style="font-weight: 700; font-size: 20px; line-height: 1.5; margin: 0 0 8px">What lies at the root</h3>
         <p style="margin: 0 0 14px">“Right or wrong.” “Working hard or being lazy.” I often found it hard to breathe inside the lines I had drawn within myself.</p>
         <p style="margin: 0 0 28px">I believe many people who try too hard are also holding on inside invisible lines like these. KoKoRoBeing is a place to loosen those lines a little and come back to who you are.</p>
@@ -169,6 +176,7 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
           <li style="margin-bottom: 6px">People who have felt stifled by lines like “right or wrong” and “working hard or being lazy”</li>
           <li style="margin-bottom: 6px">People who want to feel like themselves again while caring for the connection between mind and body</li>
         </ul>
+        </details>
       </div>
       <div style="flex: 1 1 320px; display: flex; flex-direction: column; border-top: 2px solid #1E2328">
         <div style="padding: 18px 0 6px; font-weight: 700">Three things we value</div>
@@ -184,6 +192,8 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
   <div style="max-width: 1120px; margin: 0 auto">
     <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">MINDFULNESS</div>
     <h2 style="font-weight: 700; font-size: 34px; line-height: 1.4; margin: 0 0 28px">What is mindfulness?</h2>
+    <p class="kb-catch">The practice of coming back to “here and now.”<br>You can start with a single breath.</p>
+    <details class="kb-more"><summary>Read more (what research shows)</summary>
     <div style="display: flex; flex-wrap: wrap; gap: 48px; margin-bottom: 40px">
       <div style="flex: 999 1 460px; min-width: 0">
         <p style="margin: 0 0 14px">Mindfulness is often described as “paying attention in a particular way: on purpose, in the present moment, and non-judgmentally.” This description comes from Dr. Jon Kabat-Zinn, who brought mindfulness into medical settings in the United States.</p>
@@ -197,6 +207,7 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
         <p style="margin: 0; font-size: 12.5px; color: #5B6770">Source: Goyal M, et al. Meditation Programs for Psychological Stress and Well-being. JAMA Internal Medicine. 2014;174(3):357-368.</p>
       </div>
     </div>
+    </details>
     <h3 style="font-weight: 700; font-size: 20px; line-height: 1.5; margin: 0 0 8px">How we practise at KoKoRoBeing</h3>
     <div class="kb-car-track" role="region" aria-label="How we practise" tabindex="0">
       <div class="kb-card" style="background: #E3EFEA"><div style="font-family: 'Jost', sans-serif; color: #3E6A5A; font-size: 13px; letter-spacing: 0.2em; margin-bottom: 6px">BREATH</div><div style="font-weight: 700; margin-bottom: 6px">Return to the breath</div><div style="color: #4A545B; font-size: 15px">Start by noticing each in-breath and out-breath. A place you can return to anytime, anywhere.</div></div>
@@ -238,8 +249,11 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
         <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #5B6770">STEP 01</div>
         <h3 style="font-weight: 700; font-size: 21px; margin: 0">Free trial session</h3>
         <div style="font-size: 14px; color: #4A545B">One-on-one · Online · 20 minutes · Free</div>
+        <div style="font-weight: 700; color: #3E6A5A">20 minutes to notice what is already within you</div>
         <p style="margin: 0 0 8px">Tell us how you are and what is on your mind.</p>
+        <details class="kb-more"><summary>To help you feel at ease</summary>
         <ul style="margin: 0 0 8px; padding-left: 1.2em; font-size: 14px; color: #4A545B"><li style="margin-bottom: 4px">We’d love to see you on camera, but camera off is fine too. Please put your own comfort first.</li><li style="margin-bottom: 4px">During the session, you can talk using your microphone or type in the chat.</li><li style="margin-bottom: 4px">You don’t have to talk about anything you’d rather not.</li><li style="margin-bottom: 4px">It’s okay if you can’t put things into words.</li><li style="margin-bottom: 4px">After the trial, you decide for yourself whether to continue.</li><li style="margin-bottom: 4px">Please cancel or reschedule by 8 pm Japan time, two days before your session.</li></ul>
+        </details>
         <a href="https://calendar.app.google/6E74VohACt26ZsPUA" style="margin-top: auto; font-weight: 700">Book →</a>
       </div>
       <div style="border: 1px solid #E2E7E4; border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #F4F7F5">
@@ -248,7 +262,9 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
         <div style="font-size: 14px; color: #4A545B">One-on-one · Online · 60 minutes · ¥8,800 (tax incl.)</div>
         <div style="font-weight: 700; color: #3E6A5A">For those who want to take time to sort out one concern first</div>
         <p style="margin: 0 0 8px">Combining counselling, coaching and mindfulness, each session is shaped around the theme you bring at that time.</p>
+        <details class="kb-more"><summary>How a session works</summary>
         <ol style="margin: 0 0 8px; padding-left: 1.3em; font-size: 14px; color: #4A545B"><li style="margin-bottom: 6px"><b style="color: #1E2328">Sort out what is on your mind</b><br>Together we look at the theme you want to work on now: work, relationships, emotional ups and downs, and so on.</li><li style="margin-bottom: 6px"><b style="color: #1E2328">Notice your body and feelings</b><br>We practise something that fits your theme, such as the breath or body sensations.</li><li style="margin-bottom: 6px"><b style="color: #1E2328">Find a small step to try in daily life</b><br>We look back on what you noticed and think together about what you can do in everyday life.</li></ol>
+        </details>
         <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2xmMIRZCELWuK1aU059OMc0OrmAs4N51r5ajPuOGDhUd4e27ffvG7QmbMhSIp0syt5A46qqd8i" style="margin-top: auto; font-weight: 700">Book →</a>
       </div>
       <div style="border-radius: 16px; padding: 32px 28px; display: flex; flex-direction: column; gap: 10px; background: #33443C; color: #F2F0EB">
@@ -264,41 +280,6 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
   </div>
 </section>
 
-<section id="blog" style="padding: 104px 24px">
-  <div style="max-width: 1120px; margin: 0 auto">
-    <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">BLOG</div>
-    <h2 style="font-weight: 700; font-size: 34px; line-height: 1.4; margin: 0 0 12px">Blog: “A Deep Breath in Words”</h2>
-    <p style="margin: 0 0 44px; color: #4A545B">Small everyday waves, and what I noticed in them. Selected by theme. The articles are written in Japanese.</p>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 32px">
-      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
-        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">When you compare yourself with others</h3>
-        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
-          <a href="https://ameblo.jp/sakura-vp/entry-12979918443.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">The day one small word, “too,” unsettled my mind</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12980016725.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">A queue of 90 people reminded me how not to be stubborn</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12976733379.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Change your usual point of view, and you see different things</a>
-        </div>
-      </div>
-      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
-        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">When you carry everything alone</h3>
-        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
-          <a href="https://ameblo.jp/sakura-vp/entry-12979642110.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">“I’m fine on my own.” Is that really true?</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12979468844.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">A dream about my car being hit showed me what and who matter</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12977887820.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">The gratitude I found because I was in hospital</a>
-        </div>
-      </div>
-      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
-        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">Settling the mind through the body</h3>
-        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
-          <a href="https://ameblo.jp/sakura-vp/entry-12979320922.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Why my body was tense on the train home to Japan</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12979695407.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Unless the way you use your body changes, discomfort keeps coming back</a>
-          <a href="https://ameblo.jp/sakura-vp/entry-12976638527.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Small aches start with self-care</a>
-        </div>
-      </div>
-    </div>
-    <p style="margin: 32px 0 0"><a href="https://ameblo.jp/sakura-vp/" style="font-weight: 700">See all articles (Ameblo, Japanese) →</a></p>
-  </div>
-</section>
-
 <section id="profile" style="padding: 104px 24px; background: #FFFFFF">
   <div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px">
     <img src="../images/asami_illust.jpg" alt="Illustration of Asami Sakura relaxing with a mug on a terrace overlooking the sea" loading="lazy" style="flex: 1 1 280px; min-width: 0; width: 100%; max-width: 380px; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 16px; display: block; align-self: flex-start">
@@ -306,25 +287,32 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
       <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">PROFILE</div>
       <h2 style="font-weight: 700; font-size: 34px; line-height: 1.4; margin: 0 0 24px">Founder: Asami Sakura<span style="font-size: 15px; font-weight: 400; color: #4A545B"> (咲空麻美)</span></h2>
       <p style="margin: 0 0 14px">A mindfulness instructor, counsellor and coach based in Australia. I have been living between Japan and Australia for 17 years. Since 2019, I have offered online sessions and courses. From 2022 to 2026, I have worked with more than 890 participants in total. I am currently writing a book.</p>
+      <p style="margin: 0 0 14px; font-weight: 700; font-size: 18px; line-height: 1.8; border-left: 3px solid #3E6A5A; padding-left: 14px">My starting point is my father, who struggled with alcohol dependence.<br>Looking back, I think alcohol was his “home for the mind.”</p>
+      <details class="kb-more"><summary>Read more</summary>
       <p style="margin: 0 0 14px">My starting point is my father, who struggled with alcohol dependence. As a child, I was told that I was the reason he drank. I began studying the mind because I wanted to understand why my kind father had become that way. <span class="kb-em">Looking back, I think alcohol was his “home for the mind.”</span> Everyone around him kept saying “stop.” So did I. But maybe what he was really waiting for was someone to say, “I understand why you want to drink.”</p>
       <p style="margin: 0 0 14px">After university, I learned programming at a software company, and later worked in administration and accounting. I have had many jobs, including quality control, secretary, tax office, factory work, journalist, tour guide and nature photographer.</p>
       <p style="margin: 0 0 14px">I worked hard and seriously in every job, but inside I kept drawing lines between “right and wrong” and “working hard and being lazy,” and I felt stifled. My wish to leave Japan grew stronger. After a year in Canada, I moved to Okinawa, and then to Australia. While living between two cultures, I encountered mindfulness, and little by little I regained the feeling of coming back to “now” as I am.</p>
       <p style="margin: 0 0 14px">In Australia, I also accompanied junior and senior high school students on short study-abroad trips from Japan. Each time, there was a student who had not been able to go into their classroom in Japan. In a place where they were not judged and were given time until they were ready, their eyes slowly began to shine. At the end of two weeks, they said goodbye to their host families in tears. <span class="kb-em">They taught me that people need a “home for the mind.”</span></p>
       <p style="margin: 0 0 14px">From Masaki Yoshida, president of the Mindfulness Meditation Association in Japan, I learned that the parts of myself I had rejected are also me, and that every emotion deserves to be cared for.</p>
       <p style="margin: 0 0 14px">At Maji-bun Academy, led by Yasumasa Maeda, a former copy editor at the Asahi Shimbun, I spent a year learning how to structure writing. That is where I learned what it feels like to entrust a formless mind to words.</p>
+      </details>
       <p style="margin: 0 0 20px">Today, combining hypnotherapy, work with the subconscious, somatic (body-based) approaches and focusing, I run KoKoRoBeing as a place where people who try too hard can come back to themselves.</p>
       <p style="margin: 0 0 28px"><a href="profile/index.html" style="font-weight: 700">Read the full profile →</a></p>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 24px; font-size: 14px; color: #4A545B; border-top: 1px solid #D6D6D0; padding-top: 18px">
-        <div>Certified Instructor, Mindfulness Meditation Association (Japan) (currently in the advanced instructor course)</div>
-        <div>Hypnotherapist</div>
-        <div>Yin Yoga and pelvic alignment yoga instructor</div>
+        <div style="font-weight: 700; color: #26292B">Certified Instructor, Mindfulness Meditation Association (Japan) (currently in the advanced instructor course)</div>
+        <div style="font-weight: 700; color: #26292B">Hypnotherapist</div>
+        <div style="font-weight: 700; color: #26292B">“Kokoro no Supporter” (mental health supporter), Ministry of Health, Labour and Welfare, Japan</div>
+        <div style="font-weight: 700; color: #26292B">Trauma-informed coordinator</div>
+        <div style="font-weight: 700; color: #26292B">Yin Yoga and pelvic alignment yoga instructor</div>
+      </div>
+      <details class="kb-more" style="margin-top: 12px"><summary>Other qualifications and training</summary>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 6px 24px; font-size: 14px; color: #4A545B">
         <div>RYS200 yoga course completed</div>
         <div>Certified Humanitude supporter</div>
-        <div>“Kokoro no Supporter” (mental health supporter), Ministry of Health, Labour and Welfare, Japan</div>
-        <div>Trauma-informed coordinator</div>
         <div>Happy Share ambassador</div>
         <div>BSBHRM417 Support human resources functions and processes (Australian unit of competency, completed)</div>
       </div>
+      </details>
     </div>
   </div>
 </section>
@@ -633,7 +621,8 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
 
 <section style="padding: 104px 24px; background: #33443C; color: #F2F0EB; text-align: center">
   <h2 style="font-weight: 700; font-size: clamp(26px, 4vw, 38px); line-height: 1.45; margin: 0 0 20px">Why not start<br>with a 20-minute talk?</h2>
-  <p style="margin: 0 auto 40px; max-width: 560px; color: #C9CFD3">You don’t have to carry it all alone. We begin by settling the breath together.</p>
+  <p style="margin: 0 auto 28px; max-width: 560px; color: #C9CFD3">You don’t have to carry it all alone. We begin by settling the breath together.</p>
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; max-width: 1020px; margin: 0 auto 36px"><figure style="margin: 0; flex: 1 1 240px; max-width: 320px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 20px 20px 16px; text-align: left"><blockquote style="margin: 0 0 10px; font-size: 15px; line-height: 1.8; color: #F2F0EB">“After the trial, I was braced for a sales pitch, but there was none. I quietly felt she really puts the client first.”</blockquote><figcaption style="font-size: 13px; color: #C9CFD3">Man, 30s</figcaption></figure><figure style="margin: 0; flex: 1 1 240px; max-width: 320px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 20px 20px 16px; text-align: left"><blockquote style="margin: 0 0 10px; font-size: 15px; line-height: 1.8; color: #F2F0EB">“I am grateful that I can talk safely with Asami about things I cannot talk about anywhere else.”</blockquote><figcaption style="font-size: 13px; color: #C9CFD3">Man, 60s+</figcaption></figure><figure style="margin: 0; flex: 1 1 240px; max-width: 320px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 16px; padding: 20px 20px 16px; text-align: left"><blockquote style="margin: 0 0 10px; font-size: 15px; line-height: 1.8; color: #F2F0EB">“She never pushes you to do more than you can, so I feel more positive.”</blockquote><figcaption style="font-size: 13px; color: #C9CFD3">Woman, 60s+</figcaption></figure></div>
   <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px">
     <a href="https://calendar.app.google/6E74VohACt26ZsPUA" style="display: inline-block; padding: 18px 36px; border-radius: 999px; background: #3E6A5A; color: #FFFFFF; text-decoration: none; font-weight: 700">Book a free trial session</a>
     <a href="mailto:info@kokorobeing.com" style="display: inline-block; padding: 17px 30px; border-radius: 999px; border: 1px solid #9FA9B0; color: #F2F0EB; text-decoration: none; font-weight: 500">Email us</a>
@@ -656,6 +645,41 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">Can I attend in person?</summary><p style="margin: 12px 0 0; color: #4A545B">Sessions are basically held online. When I am back in Japan, I also welcome requests for in-person workshops. Please contact us by email.</p></details>
       <details style="padding: 20px 4px; border-bottom: 1px solid #D6D6D0"><summary style="font-weight: 700; cursor: pointer">What language are the sessions in?</summary><p style="margin: 12px 0 0; color: #4A545B">Sessions are mainly held in Japanese. If you would like a session in English, please email us first at info@kokorobeing.com.</p></details>
     </div>
+  </div>
+</section>
+
+<section id="blog" style="padding: 104px 24px">
+  <div style="max-width: 1120px; margin: 0 auto">
+    <div style="font-family: 'Jost', sans-serif; font-size: 13px; letter-spacing: 0.3em; color: #5B6770; margin-bottom: 10px">BLOG</div>
+    <h2 style="font-weight: 700; font-size: 34px; line-height: 1.4; margin: 0 0 12px">Blog: “A Deep Breath in Words”</h2>
+    <p style="margin: 0 0 44px; color: #4A545B">Small everyday waves, and what I noticed in them. Selected by theme. The articles are written in Japanese.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 32px">
+      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
+        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">When you compare yourself with others</h3>
+        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
+          <a href="https://ameblo.jp/sakura-vp/entry-12979918443.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">The day one small word, “too,” unsettled my mind</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12980016725.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">A queue of 90 people reminded me how not to be stubborn</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12976733379.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Change your usual point of view, and you see different things</a>
+        </div>
+      </div>
+      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
+        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">When you carry everything alone</h3>
+        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
+          <a href="https://ameblo.jp/sakura-vp/entry-12979642110.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">“I’m fine on my own.” Is that really true?</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12979468844.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">A dream about my car being hit showed me what and who matter</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12977887820.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">The gratitude I found because I was in hospital</a>
+        </div>
+      </div>
+      <div style="border-top: 2px solid #1E2328; padding-top: 18px">
+        <h3 style="font-weight: 700; font-size: 18px; margin: 0 0 12px">Settling the mind through the body</h3>
+        <div style="display: flex; flex-direction: column; font-size: 15px; line-height: 1.6">
+          <a href="https://ameblo.jp/sakura-vp/entry-12979320922.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Why my body was tense on the train home to Japan</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12979695407.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Unless the way you use your body changes, discomfort keeps coming back</a>
+          <a href="https://ameblo.jp/sakura-vp/entry-12976638527.html" style="padding: 10px 0; border-bottom: 1px solid #D6D6D0; text-decoration: none">Small aches start with self-care</a>
+        </div>
+      </div>
+    </div>
+    <p style="margin: 32px 0 0"><a href="https://ameblo.jp/sakura-vp/" style="font-weight: 700">See all articles (Ameblo, Japanese) →</a></p>
   </div>
 </section>
 
@@ -717,7 +741,7 @@ header.kb-scrolled{box-shadow:0 4px 18px rgba(30,35,40,0.08)}
         <a href="../legal/privacy.html" lang="ja" style="color: #C9CFD3; text-decoration: none">Privacy policy (Japanese)</a>
         <a href="../legal/disclaimer.html" lang="ja" style="color: #C9CFD3; text-decoration: none">Disclaimer (Japanese)</a>
       </nav>
-      <small>© 2026 KoKoRoBeing / Asami Sakura</small>
+      <small>© 2026 KoKoRoBeing / Asami Sakura</small><br><small style="font-size: 11px">Photo: @KokoroBeing / Port Lincoln, South Australia, Australia</small>
     </div>
   </div>
 </footer>
