@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>免責事項｜KoKoRoBeing</title>
+<link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
 <meta name="description" content="KoKoRoBeing(咲空麻美)のサービスとサイトのご利用にあたっての注意事項です。">
 <meta name="theme-color" content="#3E6A5A">
 <link rel="canonical" href="https://kokorobeing.com/legal/disclaimer.html">
@@ -54,6 +55,12 @@ table.info { width: 100%; border-collapse: collapse; background: var(--paper); b
 .btn.line { background: #06C755; }
 .btn.ghost { background: var(--paper); color: var(--ink); border: 1px solid #B9BDB8; }
 .small { font-size: 14px; color: var(--muted); }
+details.more { margin: 8px 0 14px; }
+details.more > summary { display: inline-block; cursor: pointer; font-weight: 700; font-size: 14px; color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 6px 18px; list-style: none; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: " ＋"; }
+details.more[open] > summary::after { content: " −"; }
+details.more[open] > summary { margin-bottom: 8px; }
 
 footer .in { max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 12px 24px; justify-content: space-between; }
 footer nav { display: flex; flex-wrap: wrap; gap: 6px 20px; }
@@ -65,7 +72,7 @@ footer a { color: #C9CFD3; text-decoration: none; }
 <body>
 <header class="head">
   <div class="in">
-    <a class="logo" href="../index.html">KoKoRoBeing</a>
+    <a class="logo" href="../index.html" style="display: inline-flex; align-items: center; gap: 10px" aria-label="KoKoRoBeing"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 40 40" style="flex: none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#3E6A5A" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#C9A35B"/></svg><span><span style="color: #3E6A5A">KoKoRo</span>Being</span></a>
     <nav aria-label="メインメニュー">
       <a href="../index.html">トップ</a>
       <a href="../program-3months/index.html">三か月プログラム</a>
@@ -101,7 +108,7 @@ footer a { color: #C9CFD3; text-decoration: none; }
   <div style="max-width: 1120px; margin: 0 auto">
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
       <div>
-        <div style="font-family: 'Jost', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: #F2F0EB; margin-bottom: 8px">KoKoRoBeing</div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: #F2F0EB; margin-bottom: 8px; display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 40 40" style="flex: none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#8FC1AC" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#E8C987"/></svg><span><span style="color: #8FC1AC">KoKoRo</span>Being</span></div>
         <div>頑張りすぎる心に、戻る場所を。<br>オンラインのマインドフルネス</div>
         <div style="margin-top: 8px">主宰 咲空麻美(さくらあさみ)</div>
       </div>
