@@ -33,26 +33,12 @@
     nav.appendChild(a);
   });
 
-  // 世界のトップ5：1番は大きくひらいたまま、2番からはたたむ
+  // 世界のトップ5：1番を大きく。どの記事も、くわしい中身まで全部ひらいて見せる（たたまない）
   var world = wrap.querySelector('.sec-world ol.list');
   if (world) {
     var items = [].filter.call(world.children, function (li) { return li.classList.contains('item'); });
     items.forEach(function (li, i) {
       if (i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); }
-      var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
-      if (!body || !title || !body.querySelector('ul')) return;
-      li.classList.add('fold');
-      var btn = el('button', 'nx-more', T.more);
-      btn.type = 'button';
-      btn.setAttribute('aria-expanded', 'false');
-      function toggle() {
-        var open = li.classList.toggle('open');
-        btn.textContent = open ? T.close : T.more;
-        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      }
-      btn.addEventListener('click', toggle);
-      title.addEventListener('click', toggle);
-      body.appendChild(btn);
     });
   }
 
