@@ -6,8 +6,10 @@
   if (!wrap || !wrap.querySelectorAll) return;
   var en = (root.lang || '').toLowerCase().indexOf('en') === 0;
   var T = en
-    ? { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page' }
-    : { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次' };
+    ? { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page', world: 'World', japan: 'Japan',
+        chip: "Today's main news", big: 'What is happening now, in three minutes.', sub: 'The main news from the world and Japan, in plain words. Tap a headline to read more.' }
+    : { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次', world: '世界', japan: '日本',
+        chip: 'けさの主なニュース', big: 'いま起きていることを、3分で。', sub: '世界と日本のニュースを、やさしい言葉でまとめています。見出しを押すと、くわしく読めます。' };
   function el(tag, cls, text) { var e = d.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function own(node) { // 子の要素をのぞいた、そのものの文字
     var s = '';
@@ -36,7 +38,7 @@
   if (world) {
     var items = [].filter.call(world.children, function (li) { return li.classList.contains('item'); });
     items.forEach(function (li, i) {
-      if (i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); return; }
+      if (i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); }
       var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
       if (!body || !title || !body.querySelector('ul')) return;
       li.classList.add('fold');
@@ -52,6 +54,24 @@
       title.addEventListener('click', toggle);
       body.appendChild(btn);
     });
+  }
+
+  // 見出しの上に小さな分類（世界・日本）を付ける
+  [['.sec-world', T.world], ['.sec-japan', T.japan]].forEach(function (p) {
+    [].forEach.call(wrap.querySelectorAll(p[0] + ' .item .t'), function (t) {
+      t.parentNode.insertBefore(el('div', 'nx-cat', p[1]), t);
+    });
+  });
+
+  // ニュースの入り口の大きな見出し
+  var worldSec = wrap.querySelector('.sec-world');
+  if (worldSec) {
+    var hero = el('div', 'nx-hero'), day = wrap.querySelector('header .date');
+    var m = day && /^(\d{4})-(\d\d)-(\d\d)$/.exec(day.getAttribute('data-day') || '');
+    hero.appendChild(el('span', 'chip', (m ? m[1] + '.' + m[2] + '.' + m[3] + '  ・  ' : '') + T.chip));
+    hero.appendChild(el('p', 'big', T.big));
+    hero.appendChild(el('p', 'sub', T.sub));
+    wrap.insertBefore(hero, worldSec);
   }
 
   // けさの数字：相場の各欄から、先頭の2枚の最初の行をひろう
