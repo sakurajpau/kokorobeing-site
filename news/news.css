@@ -1,5 +1,11 @@
 /* いまここニュース：見やすくするための重ね着。news.js が html に .nx を付けたときだけ効く。
    毎朝の更新で記事の中身が入れ替わっても、このファイルはそのまま使える。 */
+/* 配色A「朝の白と深緑」：あたたかい白の地に、ロゴと同じ系統の深緑を1色だけ */
+:root { --bg:#FBFAF6; --paper:#FFFFFF; --ink:#1F2A27; --sub:#55625D; --line:#DFE4DE;
+  --shu:#2F5D4E; --up:#2D7A4D; --down:#A52E28; --soft:#EDF3EF; }
+.head { background:rgba(255,255,255,.96); }
+.today .card, .card, .item { background:var(--paper); }
+
 .nx .wrap { max-width:1120px; gap:26px; }
 .nx .wrap > section { scroll-margin-top:130px; }
 .nx .wrap > .note { order:8; }
@@ -37,7 +43,7 @@
 .nx .sec-world .item .n { display:none; }
 .nx .sec-world .item.lead { border:0; border-top:4px solid var(--shu); border-radius:0 0 10px 10px; padding:18px 18px 16px; box-shadow:0 1px 0 var(--line); }
 .nx .sec-world .item.lead .t { font-family:var(--f-head); font-size:clamp(1.35rem,5vw,1.8rem); line-height:1.45; margin-bottom:8px; }
-.nx .sec-world .item.lead .why { margin-top:10px; padding:8px 12px; border-left:3px solid var(--shu); background:var(--soft); border-radius:0 6px 6px 0; color:var(--ink); }
+.nx .sec-world .item.lead .why { margin-top:10px; padding:10px 14px; background:var(--soft); border-radius:8px; color:var(--ink); }
 .nx .item.fold .t { cursor:pointer; }
 .nx .item.fold:not(.open) .src { display:none; }
 .nx .item.fold:not(.open) ul { display:none; }
@@ -45,8 +51,9 @@
 .nx .item.lead.fold:not(.open) ul li:not(:first-child) { display:none; }
 .nx .sec-world .item.fold:not(.lead):not(.open) .why { display:none; }
 .nx .sec-world .item.fold:not(.lead):not(.open) .t { margin-bottom:0; }
-.nx-more { margin-top:8px; padding:3px 14px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--shu); font:inherit; font-size:.82rem; cursor:pointer; }
-.nx-more:hover, .nx-more:focus-visible { border-color:var(--shu); }
+.nx-more { margin-top:10px; min-height:44px; padding:0 20px; border:1px solid var(--shu); border-radius:999px; background:transparent; color:var(--shu); font:inherit; font-size:.88rem; font-weight:700; cursor:pointer; }
+.nx .item.lead .nx-more { background:var(--shu); color:#fff; }
+.nx-more:hover, .nx-more:focus-visible { background:var(--shu); color:#fff; }
 .nx-more::after { content:" ＋"; }
 .nx .item.open > div > .nx-more::after { content:" −"; }
 .nx .sec-world .item:not(.lead) { border:0; border-bottom:1px solid var(--line); border-radius:0; background:transparent; padding:12px 2px 14px; }
@@ -59,7 +66,6 @@
 .nx .sec-japan .list { gap:0; background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:2px 16px; }
 .nx .sec-japan .item { border:0; border-bottom:1px dashed var(--line); border-radius:0; background:transparent; padding:13px 0; }
 .nx .sec-japan .item:last-child { border-bottom:0; }
-.nx .sec-other .mini .item { border-left:3px solid var(--shu); }
 
 @media (min-width:860px) {
   .nx .wrap { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); grid-auto-flow:row dense; column-gap:26px; }
