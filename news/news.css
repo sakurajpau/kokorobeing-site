@@ -1,0 +1,57 @@
+/* いまここニュース：見やすくするための重ね着。news.js が html に .nx を付けたときだけ効く。
+   毎朝の更新で記事の中身が入れ替わっても、このファイルはそのまま使える。 */
+.nx .wrap { max-width:1120px; gap:26px; }
+.nx .wrap > section { scroll-margin-top:130px; }
+.nx .wrap > .note { order:8; }
+.nx .wrap > footer { order:9; }
+
+/* 目次（横にならぶ丸いボタン） */
+.nx-nav { display:flex; gap:8px; overflow-x:auto; padding:2px 0 6px; margin:-8px 0 0; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+.nx-nav::-webkit-scrollbar { display:none; }
+.nx-nav a { flex:none; padding:5px 15px; border:1px solid var(--line); border-radius:999px; background:var(--paper); color:var(--ink); text-decoration:none; font-size:.9rem; white-space:nowrap; }
+.nx-nav a:hover, .nx-nav a:focus-visible { border-color:var(--shu); color:var(--shu); }
+
+/* けさの数字（横に流して見る帯） */
+.nx-nums { display:flex; align-items:stretch; background:var(--paper); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+.nx-nums .lab { flex:none; display:flex; align-items:center; padding:0 12px; background:var(--shu); color:#fff; font-size:.8rem; font-weight:700; letter-spacing:.06em; }
+.nx-nums .run { display:flex; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch; }
+.nx-nums .run::-webkit-scrollbar { display:none; }
+.nx-nums .num { flex:none; padding:8px 16px; border-right:1px dashed var(--line); line-height:1.4; }
+.nx-nums .num:last-child { border-right:0; }
+.nx-nums .k { display:block; font-size:.74rem; color:var(--sub); }
+.nx-nums .val { font-weight:700; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.nx-nums .c { font-size:.78rem; font-weight:500; }
+
+/* 見出しの飾り */
+.nx .wrap > section > h2 { border-left:5px solid var(--shu); padding-left:12px; line-height:1.4; }
+
+/* 世界のトップ5：1番を大きく、2番からは見出しだけ（押すとひらく） */
+.nx .sec-world .item.lead { border:0; border-top:4px solid var(--shu); border-radius:0 0 10px 10px; padding:18px 18px 16px; box-shadow:0 1px 0 var(--line); }
+.nx .sec-world .item.lead .t { font-family:var(--f-head); font-size:clamp(1.3rem,4.6vw,1.75rem); line-height:1.45; margin-bottom:10px; }
+.nx .sec-world .item.lead .n { font-size:2.2rem; }
+.nx .item.fold .t { cursor:pointer; }
+.nx .item.fold:not(.open) ul, .nx .item.fold:not(.open) .src { display:none; }
+.nx .item.fold:not(.open) .t { margin-bottom:2px; }
+.nx-more { margin-top:8px; padding:3px 14px; border:1px solid var(--line); border-radius:999px; background:transparent; color:var(--shu); font:inherit; font-size:.82rem; cursor:pointer; }
+.nx-more:hover, .nx-more:focus-visible { border-color:var(--shu); }
+.nx-more::after { content:" ＋"; }
+.nx .item.open > div > .nx-more::after { content:" −"; }
+
+/* 日本のトップ5：線で区切った一覧に */
+.nx .sec-japan .list { gap:0; background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:2px 16px; }
+.nx .sec-japan .item { border:0; border-bottom:1px dashed var(--line); border-radius:0; background:transparent; padding:13px 0; }
+.nx .sec-japan .item:last-child { border-bottom:0; }
+.nx .sec-other .mini .item { border-left:3px solid var(--shu); }
+
+@media (min-width:860px) {
+  .nx .wrap { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); grid-auto-flow:row dense; column-gap:26px; }
+  .nx .wrap > * { grid-column:1 / -1; }
+  .nx .wrap > .sec-japan { grid-column:1; }
+  .nx .wrap > .sec-other { grid-column:2; }
+  .nx .sec-world .list { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); column-gap:26px; align-items:start; }
+  .nx .sec-world .item.lead { grid-column:1; }
+  .nx .sec-world .item:not(.lead) { grid-column:2; grid-template-columns:1.7rem 1fr; padding:12px 14px; }
+  .nx .sec-world .item:not(.lead) .n { font-size:1.3rem; }
+  .nx .sec-world .item:not(.lead) .t { font-size:1rem; }
+}
+@media print { .nx-nav, .nx-more { display:none; } .nx .item.fold:not(.open) ul, .nx .item.fold:not(.open) .src { display:block; } }
