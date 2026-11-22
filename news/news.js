@@ -6,9 +6,9 @@
   if (!wrap || !wrap.querySelectorAll) return;
   var en = (root.lang || '').toLowerCase().indexOf('en') === 0;
   var T = en
-    ? { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page', world: 'World', japan: 'Japan',
+    ? { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page', world: 'World', japan: 'Japan', mideast: 'Middle East',
         chip: "Today's main news", big: 'What is happening now, in three minutes.', sub: 'The main news from the world and Japan, in plain words. Tap a headline to read more.' }
-    : { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次', world: '世界', japan: '日本',
+    : { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次', world: '世界', japan: '日本', mideast: '中東',
         chip: 'けさの主なニュース', big: 'いま起きていることを、3分で。', sub: '世界と日本のニュースを、やさしい言葉でまとめています。見出しを押すと、くわしく読めます。' };
   function el(tag, cls, text) { var e = d.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function own(node) { // 子の要素をのぞいた、そのものの文字
@@ -22,6 +22,7 @@
   nav.setAttribute('aria-label', T.nav);
   secs.forEach(function (s, i) {
     if (s.classList.contains('today')) s.classList.add('sec-today');
+    else if (s.classList.contains('mideast')) s.classList.add('sec-mideast');
     else if (s.querySelector('ol.list')) s.classList.add(lists++ ? 'sec-japan' : 'sec-world');
     else if (s.querySelector('.mini')) s.classList.add('sec-other');
     else if (s.querySelector('.grid')) { s.classList.add('sec-market'); market.push(s); }
@@ -33,42 +34,41 @@
     nav.appendChild(a);
   });
 
-  // 世界のトップ5：1番を大きく
-  var world = wrap.querySelector('.sec-world ol.list');
-  if (world) {
+  // 世界のトップ5：1番は大きくひらいたまま、2番からはたたむ
+  // いちばん上の面(中東情勢があればそれ、なければ世界)は1番を大きく。そのあとの世界の面は、どれも押すとひらく
+  var topSec = wrap.querySelector('.sec-mideast') || wrap.querySelector('.sec-world');
+  if (topSec) topSec.classList.add('sec-top');
+  [].forEach.call(wrap.querySelectorAll('.sec-mideast ol.list, .sec-world ol.list, .sec-japan ol.list'), function (world) {
+    var isTop = world.parentNode === topSec;
     var items = [].filter.call(world.children, function (li) { return li.classList.contains('item'); });
     items.forEach(function (li, i) {
-      if (i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); }
+      if (isTop && i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); }
+      var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
+      if (!body || !title || !body.querySelector('ul')) return;
+      li.classList.add('fold');
+      var btn = el('button', 'nx-more', T.more);
+      btn.type = 'button';
+      btn.setAttribute('aria-expanded', 'false');
+      function toggle() {
+        var open = li.classList.toggle('open');
+        btn.textContent = open ? T.close : T.more;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      }
+      btn.addEventListener('click', toggle);
+      title.addEventListener('click', toggle);
+      body.appendChild(btn);
     });
-  }
-
-  // 世界・日本のどの記事も、はじめの数行だけ見せて「くわしく読む」ボタンでひらく
-  [].forEach.call(wrap.querySelectorAll('.sec-world ol.list > li.item, .sec-japan ol.list > li.item'), function (li) {
-    var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
-    if (!body || !title || !body.querySelector('ul')) return;
-    li.classList.add('fold');
-    var btn = el('button', 'nx-more', T.more);
-    btn.type = 'button';
-    btn.setAttribute('aria-expanded', 'false');
-    function toggle() {
-      var open = li.classList.toggle('open');
-      btn.textContent = open ? T.close : T.more;
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    }
-    btn.addEventListener('click', toggle);
-    title.addEventListener('click', toggle);
-    body.appendChild(btn);
   });
 
   // 見出しの上に小さな分類（世界・日本）を付ける
-  [['.sec-world', T.world], ['.sec-japan', T.japan]].forEach(function (p) {
+  [['.sec-mideast', T.mideast], ['.sec-world', T.world], ['.sec-japan', T.japan]].forEach(function (p) {
     [].forEach.call(wrap.querySelectorAll(p[0] + ' .item .t'), function (t) {
       t.parentNode.insertBefore(el('div', 'nx-cat', p[1]), t);
     });
   });
 
   // ニュースの入り口の大きな見出し
-  var worldSec = wrap.querySelector('.sec-world');
+  var worldSec = topSec;
   if (worldSec) {
     var hero = el('div', 'nx-hero'), day = wrap.querySelector('header .date');
     var m = day && /^(\d{4})-(\d\d)-(\d\d)$/.exec(day.getAttribute('data-day') || '');
