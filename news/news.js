@@ -48,7 +48,7 @@
     var isTop = world.parentNode === topSec;
     var items = [].filter.call(world.children, function (li) { return li.classList.contains('item'); });
     items.forEach(function (li, i) {
-      if (isTop && i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + Math.min(items.length - 1, 3); } // 横に並べるのは3本まで。のこりは下に2列で(パソコンで左が空かないように)
+      if (isTop && i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + 1; } // 横に並べるのは3本まで。のこりは下に2列で(パソコンで左が空かないように)
       var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
       if (!body || !title || !body.querySelector('ul')) return;
       li.classList.add('fold');
