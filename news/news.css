@@ -184,3 +184,11 @@ html:not([lang="ja"]).nx .wrap > header h1 { white-space:normal; font-size:clamp
 .nx-chart figcaption { display:flex; justify-content:space-between; gap:8px; margin-top:3px; font-size:.76rem; color:var(--sub); }
 .nx-chart figcaption .c { font-size:.76rem; }
 .nx-chart-src { grid-column:1 / -1; margin:6px 0 0; color:var(--sub); }
+
+/* パソコン：いちばん上の面は、大きな記事の横に3本だけ。5本目からは下に2列で並べる(左の空白をなくす 2026-11-23) */
+@media (min-width:860px) {
+  .nx .sec-top .list > .item:nth-child(n+5) { grid-column:auto; border-left:0; padding-left:0; padding-right:26px; }
+  .nx .sec-top .list > .item:nth-child(n+5):nth-child(even) { border-left:1px solid var(--ink); padding-left:26px; padding-right:0; }
+  .nx .sec-top .list > .item:nth-child(5) { border-top:1px solid var(--ink); }
+  .nx .sec-top .list > .item:nth-child(6) { border-top:1px solid var(--ink); }
+}
