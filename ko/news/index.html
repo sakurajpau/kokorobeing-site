@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>오늘의 세계·일본 뉴스를 쉬운 말로 | 지금 여기 뉴스 | KoKoRoBeing</title>
+<link rel="icon" href="/images/logo-mark.svg" type="image/svg+xml">
+<meta name="description" content="세계와 일본에서 일어나는 일을 매일 아침 쉬운 말로 정리합니다. 중동, 주요 뉴스 5가지, 원유·금·주가·환율, 출처 포함.">
+<meta name="theme-color" content="#3E6A5A">
+<link rel="canonical" href="https://kokorobeing.com/ko/news/">
+<link rel="alternate" hreflang="ja" href="https://kokorobeing.com/news/">
+<link rel="alternate" hreflang="en" href="https://kokorobeing.com/en/news/">
+<link rel="alternate" hreflang="id" href="https://kokorobeing.com/id/news/">
+<link rel="alternate" hreflang="ko" href="https://kokorobeing.com/ko/news/">
+<link rel="alternate" hreflang="x-default" href="https://kokorobeing.com/news/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Jost:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root { --bg:#FFFFFF; --paper:#FFFFFF; --ink:#23272A; --sub:#5B6770; --line:#E2E7E4;
+  --shu:#3E6A5A; --up:#2D7A4D; --down:#B0352F; --soft:#F4F7F5; }
+* { box-sizing: border-box; }
+body { margin:0; background:var(--bg); color:var(--ink); font-family:"Zen Kaku Gothic New","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif; font-size:16px; line-height:1.85; }
+a { color:var(--shu); }
+.head { position:sticky; top:env(safe-area-inset-top,0px); z-index:50; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
+.head .in { max-width:1120px; margin:0 auto; padding:14px 20px; display:flex; flex-wrap:wrap; gap:12px; justify-content:space-between; align-items:center; }
+.logo { font-family:"Jost",sans-serif; font-weight:500; font-size:20px; letter-spacing:.12em; color:var(--ink); text-decoration:none; }
+.head nav { display:flex; flex-wrap:wrap; gap:6px 20px; font-size:14px; }
+.head nav a { color:#4A545B; text-decoration:none; }
+.head nav a.on { color:var(--shu); font-weight:700; }
+.head nav a.lang { border:1px solid #B9BDB8; border-radius:999px; padding:0 12px; }
+main { padding:40px 20px 80px; }
+.wrap { max-width:900px; margin:0 auto; display:grid; gap:30px; }
+.wrap header { display:flex; flex-wrap:wrap; align-items:baseline; justify-content:space-between; gap:6px 16px; border-bottom:2px solid var(--ink); padding-bottom:10px; }
+.eyebrow { display:block; font-family:"Jost",sans-serif; font-size:13px; letter-spacing:.3em; color:var(--sub); font-weight:400; }
+h1 { font-size:clamp(26px,5vw,34px); line-height:1.4; margin:0; }
+.date { color:var(--sub); font-size:.95rem; }
+.note { background:var(--soft); border-radius:8px; padding:10px 14px; font-size:.88rem; color:var(--sub); }
+h2 { font-size:1.35rem; margin:0 0 12px; display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 10px; }
+h2 small { font-size:.8rem; color:var(--sub); font-weight:400; }
+.list { display:grid; gap:12px; margin:0; padding:0; list-style:none; }
+.item { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px; display:grid; grid-template-columns:2.2rem 1fr; gap:2px 12px; }
+.item>div { min-width:0; }
+.n { font-family:"Jost",sans-serif; font-weight:500; font-size:1.6rem; color:var(--shu); line-height:1.2; }
+.t { font-weight:700; font-size:1.05rem; line-height:1.55; margin-bottom:4px; }
+.tag { display:inline-block; font-size:.72rem; font-weight:500; color:var(--shu); border:1px solid var(--shu); border-radius:99px; padding:0 8px; margin-left:6px; vertical-align:2px; white-space:nowrap; }
+.item ul { margin:2px 0 6px; padding-left:1.2em; }
+.why { font-size:.92rem; color:var(--sub); }
+.src { font-size:.8rem; color:var(--sub); margin-top:4px; }
+.mini { display:grid; gap:10px; }
+.mini .item { grid-template-columns:1fr; }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+.card { background:var(--paper); border:1px solid var(--line); border-radius:10px; padding:14px 16px; min-width:0; }
+.card h3 { margin:0 0 6px; font-size:.95rem; font-weight:500; color:var(--sub); }
+.row { display:flex; justify-content:space-between; align-items:baseline; gap:8px; padding:6px 0; border-bottom:1px dashed var(--line); flex-wrap:wrap; }
+.row:last-of-type { border-bottom:0; }
+.v { font-weight:700; font-size:1.06rem; font-variant-numeric:tabular-nums; white-space:nowrap; }
+.c { font-size:.84rem; margin-left:6px; }
+.up { color:var(--up); } .down { color:var(--down); } .flat { color:var(--sub); }
+.small { display:block; font-size:.8rem; color:var(--sub); margin-top:4px; }
+.wrap footer { font-size:.84rem; color:var(--sub); border-top:1px solid var(--line); padding-top:12px; }
+.archive .days { list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; gap:8px; }
+.archive .days a { display:inline-block; padding:4px 14px; border:1px solid var(--line); border-radius:999px; text-decoration:none; font-variant-numeric:tabular-nums; }
+
+:root { --bg:#f5efe2; --paper:#fffbf2; --ink:#2f2822; --sub:#76685a; --line:#e0d4bf;
+  --shu:#a8432a; --up:#2d7a4d; --down:#b0352f; --soft:#efe4cf;
+  --f-head:"Shippori Mincho","Yu Mincho","Hiragino Mincho ProN",serif; color-scheme:light; }
+html, body { background:var(--bg); }
+body { color:var(--ink); line-height:1.8; }
+.head { background:rgba(245,239,226,.96); border-bottom:1px solid var(--line); }
+.wrap { max-width:940px; }
+.wrap header { border-bottom:3px double var(--shu); }
+h1 { font-family:var(--f-head); font-weight:800; letter-spacing:.04em; }
+h2 { font-family:var(--f-head); font-size:1.45rem; }
+h2 small { font-family:"Zen Kaku Gothic New",sans-serif; }
+.n { font-family:var(--f-head); font-weight:800; font-size:1.7rem; color:var(--shu); line-height:1.1; }
+.src a, .small a { color:var(--shu); }
+.archive .days a { background:var(--paper); color:var(--shu); }
+
+.today ul { margin:0; padding-left:1.2em; }
+.today li { margin-bottom:6px; }
+.today li:last-child { margin-bottom:0; }
+.today .yr { font-weight:700; color:var(--shu); margin-right:4px; white-space:nowrap; }
+</style>
+<link rel="stylesheet" href="../../news/news.css">
+</head>
+<body>
+<header class="head"><div class="in">
+<a class="logo" href="../../en/index.html" style="display: inline-flex; align-items: center; gap: 10px" aria-label="KoKoRoBeing"><svg aria-hidden="true" width="30" height="30" viewBox="0 0 40 40" style="flex: none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#3E6A5A" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#C9A35B"/></svg><span><span style="color: #3E6A5A">KoKoRo</span>Being</span></a>
+<nav aria-label="메인 메뉴"><a href="../../en/index.html">홈</a><a href="../../en/profile/index.html">사쿠라 아사미 소개</a><a href="../../ko/news/index.html" class="on">지금 여기 뉴스</a><a href="../../en/index.html#contact">문의</a><a class="lang" href="../../news/index.html" lang="ja" hreflang="ja">日本語</a><a class="lang" href="../../en/news/index.html" lang="en" hreflang="en">English</a><a class="lang" href="../../id/news/index.html" lang="id" hreflang="id">Indonesia</a></nav>
+</div></header>
+<main>
+<div class="wrap">
+<header>
+  <h1 style="display:flex;align-items:center;gap:12px"><svg aria-hidden="true" width="40" height="40" viewBox="0 0 40 40" style="flex:none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#3E6A5A" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#C9A35B"/></svg><span><span class="eyebrow">HERE &amp; NOW</span>지금 여기 뉴스</span></h1>
+  <div class="date" data-day="2026-11-22">2026년 11월 22일 일요일 · 일본 시간 오전 5시 판</div>
+</header>
+
+<div class="note">시장 수치는 작성 시점에 확인된 가장 최근 값입니다(날짜는 각 상자에 표시). "일본에서 보도가 적음"은 저희 자체 판단입니다. 사망자 수와 공격 횟수는 각 출처가 보도한 대로입니다.</div>
+
+<section class="mideast">
+<h2>중동 <small>지역 매체와 YouTube 보도에서 고른 주요 소식</small></h2>
+<ol class="list">
+<li class="item"><span class="n">1</span><div>
+  <div class="t">호르무즈 해협: 이란 "미국 드론 2대 격추" 주장, 유조선 2척도 피격</div>
+  <ul>
+    <li>이란 혁명수비대는 21일, 호르무즈 해협 상공에서 미국 MQ-9 드론을, 케슘섬 상공에서 MQ-1을 격추했다고 밝혔습니다. 이란 육군은 미국 F-16 전투기를 맞혔다고도 주장하지만, 미국 중부사령부는 이를 부인합니다.</li>
+    <li>영국 해사 기관 UKMTO에 따르면, 해협을 빠져나가던 유조선 2척이 21일 오만 앞바다에서 정체불명의 발사체에 맞았습니다. 이와 별개로 이란 해군은 해협 동쪽의 유조선 한 척이 해상 기뢰에 부딪혀 불타고 있다고 밝혔습니다.</li>
+    <li>미국과 이란은 6월에 양해각서에 서명했지만, 해협에서 배가 자유롭게 지나다닐 수 있는지를 두고 협상이 막혀 있습니다. 20일 트럼프 대통령은 "더티 밤(방사성 물질 폭탄)" 계획이 있다는 보도를 두고 군사 행동을 시사하며 이란에 경고했습니다(이란은 이 보도가 날조라고 말합니다). 21일에는 이란의 핵무기 보유를 막는 "영구적인" 합의를 원한다고 말했습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 호르무즈 해협은 세계 석유의 주요 통로입니다. 전투가 길어질수록 유가와 해상 운송에 더 큰 영향을 줍니다.</div>
+  <div class="src">출처: <a href="https://www.aljazeera.com/middle-east/" target="_blank" rel="noopener">Al Jazeera (중동)</a> / <a href="https://www.yahoo.com/news/us/articles/iran-irgc-downs-us-drone-093024473.html" target="_blank" rel="noopener">Yahoo News (Al Jazeera)</a> / <a href="https://www.investing.com/news/economy-news/iran-war-sees-tanker-hit-near-hormuz-as-saudi-arabia-intercepts-houthi-missiles-5043277" target="_blank" rel="noopener">Investing.com</a> / <a href="https://www.aol.com/articles/iran-strikes-3-tankers-shows-144349000.html" target="_blank" rel="noopener">AOL (AP)</a> / <a href="https://newscord.org/article/iran-claims-it-hit-us-f-16-over-gulf-forcing-emergency-landing-centcom-denies--Story_20261121_cd734b9a" target="_blank" rel="noopener">Newscord (9개 매체 비교)</a> / <a href="https://www.middleeastmonitor.com/20261120-trump-warns-iran-against-reported-dirty-bomb-plot-targeting-washington/" target="_blank" rel="noopener">Middle East Monitor</a> / <a href="https://en.ilsole24ore.com/art/war-in-iran-latest-news-saudi-arabia-three-houthi-missiles-intercepted-riyadh-red-sea-ports-under-threat-AJRb6DOC" target="_blank" rel="noopener">Il Sole 24 Ore</a> / <a href="https://www.youtube.com/watch?v=chBzkjeMPyg" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://www.youtube.com/watch?v=1dV_jSTebUU" target="_blank" rel="noopener">YouTube (TRT World)</a> / <a href="https://www.youtube.com/watch?v=9UoV_Affg88" target="_blank" rel="noopener">YouTube (Middle East Eye)</a></div>
+</div></li>
+<li class="item"><span class="n">2</span><div>
+  <div class="t">사우디 주도 연합군, 예멘 수도 사나 등 공습; 후티, 리야드에 미사일 발사</div>
+  <ul>
+    <li>사우디 주도 연합군은 호데이다 항구에 이어 수도 사나, 사다, 타이즈도 공습했습니다. 미사일·드론 시설과 보급 창고 같은 "군사 목표물"을 때렸다고 밝혔습니다.</li>
+    <li>후티(예멘의 이란 우호 무장 단체)는 지난 24시간 동안의 공습으로 41명이 숨졌다고 밝혔습니다. 이는 후티 자신의 수치이며 다른 곳에서 확인된 것은 아닙니다.</li>
+    <li>후티는 리야드를 포함해 사우디 전역의 목표물을 공격했다고 밝혔습니다. 연합군은 리야드로 향하던 탄도미사일 3발을 격추했다고 밝혔습니다. 타이즈주에서는 지상전도 더 심해지고 있고 구호 자금은 줄고 있다고 전해집니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 사우디와 후티의 전투는 몇 달 동안 잠잠했다가 갑자기 격렬해졌습니다. 홍해 항구와 항공 운항으로 불안이 번지고 있습니다.</div>
+  <div class="src">출처: <a href="https://www.newarab.com/news/saudi-coalition-launches-operation-houthis-vow-reprisals" target="_blank" rel="noopener">The New Arab</a> / <a href="https://www.aljazeera.com/news/2026/11/20/saudi-coalition-and-houthis-exchange-threats-to-bomb-key-ports" target="_blank" rel="noopener">Al Jazeera</a> / <a href="https://gulfnews.com/world/gulf/saudi/saudi-coalition-launches-special-operation-yemens-houthis-vow-reprisals-1.500755368" target="_blank" rel="noopener">Gulf News</a> / <a href="https://www.business-standard.com/world-news/saudi-led-coalition-strikes-houthi-targets-as-rebels-attack-saudi-arabia-126112100022_1.html" target="_blank" rel="noopener">Business Standard</a> / <a href="https://www.yahoo.com/news/world/articles/saudi-coalition-launches-special-operation-183355371.html" target="_blank" rel="noopener">Yahoo News</a> / <a href="https://www.courthousenews.com/saudi-coalition-launches-special-operation-as-yemens-houthis-vow-reprisals/" target="_blank" rel="noopener">Courthouse News</a> / <a href="https://www.youtube.com/watch?v=SyGtGzQZDNY" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://www.youtube.com/watch?v=BFoQ5ZQOBVE" target="_blank" rel="noopener">YouTube (TRT World)</a></div>
+</div></li>
+<li class="item"><span class="n">3</span><div>
+  <div class="t">가자: 이스라엘군 공습이 식량 실은 차량을 때려 3명 사망<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>가자 보건부와 목격자들에 따르면, 21일 가자시티 텔 알하와 지역에서 이스라엘군 공습이 식량을 실은 차량을 때려 3명이 숨졌습니다.</li>
+    <li>이스라엘군은 이 차량을 무장 단체 이슬라믹 지하드 대원들이 다른 전투원에게 식량과 물자를 옮기는 데 쓰고 있었다고 밝혔습니다. 현장에서는 구호 단체 월드 센트럴 키친의 로고가 찍힌 서류가 보였지만, 이 단체는 그 차량이 자신들 것이 아니라고 말합니다.</li>
+    <li>가자 민방위대는 북부 자발리야에서 총격으로 한 명이 더 숨졌다고 밝혔습니다. 민방위대 차량의 85% 이상이 운행하지 못하는 상태라고 전해집니다. 팔레스타인 NGO 네트워크 대표는 이스라엘이 텐트 15만 개 이상을 막고 있으며, 피란민촌 텐트는 겨울비에 물에 잠기고 있다고 말합니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 휴전 중이어야 할 가자에서 식량을 전달하는 일도, 사람을 구조하는 일도 여전히 어렵습니다.</div>
+  <div class="src">출처: <a href="https://www.aljazeera.com/news/2026/11/21/at-least-four-palestinians-killed-in-israeli-attacks-on-gaza" target="_blank" rel="noopener">Al Jazeera</a> / <a href="https://arabnews.com/middle-east/israeli-strike-kills-three-in-vehicle-distributing-aid-in-gaza-witnesses-say-3013366" target="_blank" rel="noopener">Arab News</a> / <a href="https://www.trtworld.com/article/1799a4d614f3" target="_blank" rel="noopener">TRT World</a> / <a href="https://www.nbcnews.com/world/gaza/israeli-strike-kills-three-aid-gaza-witnesses-rcna610569" target="_blank" rel="noopener">NBC News (Reuters)</a> / <a href="https://www.nst.com.my/world/world/2026/11/1582766/israeli-strike-kills-three-vehicle-distributing-aid-gaza" target="_blank" rel="noopener">New Straits Times</a> / <a href="https://www.youtube.com/watch?v=wqD3xKt5SmM" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://www.youtube.com/watch?v=LQzV6mbK30o" target="_blank" rel="noopener">YouTube (Middle East Eye)</a> / <a href="https://www.youtube.com/watch?v=qGgmXBwdh_E" target="_blank" rel="noopener">YouTube (Middle East Eye, 텐트)</a></div>
+</div></li>
+<li class="item"><span class="n">4</span><div>
+  <div class="t">서안지구: 정착민 공격 급증, 팔레스타인 남성 1명 사망<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>Al Jazeera는 이스라엘 점령지인 서안지구에서 이스라엘 정착민의 공격이 잇따라 일어나 팔레스타인 남성이 최소 1명 숨졌다고 전합니다.</li>
+    <li>이스라엘군도 서안지구 곳곳에서 새로운 급습 작전을 시작했습니다.</li>
+    <li>Middle East Eye는 무장한 정착민들이 팔레스타인 주민의 집을 에워싼 영상과, 정착민들이 상인에게서 과일과 채소 상자를 가져가는 영상을 보여 줍니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 가자에 관심이 쏠려 있는 사이, 서안지구에서도 사람들의 생활과 안전이 위협받고 있습니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=TQ3THs_Srbg" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://www.youtube.com/watch?v=LeVpTRvjPr0" target="_blank" rel="noopener">YouTube (Middle East Eye)</a> / <a href="https://www.youtube.com/watch?v=hxPMQU5EuME" target="_blank" rel="noopener">YouTube (Middle East Eye, 상인)</a></div>
+</div></li>
+<li class="item"><span class="n">5</span><div>
+  <div class="t">이라크: 정부군, 이란 후원 무장 단체의 거점 주르프 알사카르에 진입<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>이라크 보안군은 20일 바그다드 남쪽의 주르프 알사카르에 들어갔습니다. 이곳은 이란이 후원하는 카타이브 헤즈볼라의 거점입니다. 정부와 이 단체가 합의해 충돌은 피했습니다.</li>
+    <li>이번 조치는 이 지역의 석유 밀수를 확인한 정부 조사에 뒤이어 나왔습니다. 이 단체가 정말로 통제권을 내려놓을지는 아직 불분명하다고 전해집니다.</li>
+    <li>별도로, 21일 남부 바스라 북쪽의 하르타 발전소에서 큰 불이 났습니다. 보안 당국자들은 최소 4명이 숨지고 30명이 다쳤다고 말합니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 이라크 정부가 이란이 후원하는 무장 단체를 통제할 수 있는지 가늠하는 시험대입니다.</div>
+  <div class="src">출처: <a href="https://www.aljazeera.com/news/2026/11/18/what-is-iraqs-jurf-al-sakhar-and-what-is-behind-govt-push-to-control-it" target="_blank" rel="noopener">Al Jazeera</a> / <a href="https://www.youtube.com/watch?v=Rpdiiuj3zf8" target="_blank" rel="noopener">YouTube (Middle East Eye)</a> / <a href="https://rudaw.net/english/categories/iraq/1080225" target="_blank" rel="noopener">Rudaw</a> / <a href="https://www.kurdistan24.net/en/story/953795" target="_blank" rel="noopener">Kurdistan24</a> / <a href="https://www.youtube.com/watch?v=tB-kmjg9wF0" target="_blank" rel="noopener">YouTube (Middle East Eye, 화재)</a> / <a href="https://www.youtube.com/watch?v=Og6CIt4rshY" target="_blank" rel="noopener">YouTube (TRT World, 화재)</a></div>
+</div></li>
+<li class="item"><span class="n">6</span><div>
+  <div class="t">이스라엘: 야당 대표 아이젠코트, 새 정부 구성 기간의 절반 지나<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>Middle East Eye에 따르면, 야당 대표 가디 아이젠코트는 새 정부를 꾸리도록 주어진 기간의 절반쯤을 보냈으며 연정 협상이 이어지고 있습니다.</li>
+    <li>네타냐후 총리는 자국 내 아랍계 정당들을 공격하고, 이란과의 또 한 차례 전쟁을 주장하고 있다고 전해집니다.</li>
+    <li>이스라엘 국내에서는 군에 입대하지 않은 종교 학생이 체포된 뒤 초정통파 시위대가 경찰과 충돌했습니다.</li>
+  </ul>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=d9BqZTk20co" target="_blank" rel="noopener">YouTube (Middle East Eye)</a> / <a href="https://www.youtube.com/watch?v=zUre18Usmg8" target="_blank" rel="noopener">YouTube (Middle East Eye, 시위)</a></div>
+</div></li>
+<li class="item"><span class="n">7</span><div>
+  <div class="t">바레인: 이란의 공격으로 산업 시설에 불, 이란은 "미군 기지를 노렸다"고 주장</div>
+  <ul>
+    <li>바레인 내무부는 21일 늦게, 이란의 공격으로 "민간 산업 시설이 공격받아" 불이 났다고 밝혔습니다. 다친 사람은 없고 물적 피해만 있었으며, 민방위대가 불을 껐습니다. 내무부는 시설 이름을 밝히지 않았습니다(정유 시설이 있는 시트라섬 위로 연기가 보였다는 보도도 있습니다).</li>
+    <li>바레인군은 이란의 공중 공격 여러 건을 요격했다고 밝혔습니다. 당국은 "잠재적 위협" 경보를 다시 발령하고 침착할 것을 당부했습니다.</li>
+    <li>이란 혁명수비대는 바레인에 있는 미군 시설을 때렸다고 밝혔고, 22일에는 미국 패트리엇 레이더 2기를 맞혔다고 주장했습니다. 바레인은 이를 부인하며 유엔 안전보장이사회에 조치를 요청했습니다. 요르단과 걸프협력회의(GCC)는 이번 공격을 규탄했습니다.</li>
+    <li>같은 날 수비대 사령관 아흐마드 바히디는 영상에서, 걸프 해역에는 보통 서방 군함이 70~80척, 많을 때는 120척까지 있었지만 몇 달째 한 척도 보이지 않는다며, 이란의 적들은 "패배를 인정하고" 이 지역을 떠나는 것 말고는 "선택지가 없다"고 말했습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 호르무즈 분쟁이 이제 걸프 건너편의 공장에까지 미쳐, 현지 생활과 석유 흐름에 영향을 주고 있습니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=5pcudQ5xN8Y" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://saudigazette.com.sa/article/666424/world/iranian-attack-sparks-fire-at-civilian-industrial-facility-in-bahrain-no-injuries-reported" target="_blank" rel="noopener">Saudi Gazette</a> / <a href="https://www.arabtimesonline.com/news/iranian-attack-targets-civilian-industrial-facility-in-bahrain-fire-breaks-out/" target="_blank" rel="noopener">Arab Times</a> / <a href="https://english.news.cn/20261122/a6d000cae1324ad3a3b29cf3ec93c34a/c.html" target="_blank" rel="noopener">Xinhua</a> / <a href="https://www.iranintl.com/en/liveblog/202611214578" target="_blank" rel="noopener">Iran International</a> / <a href="https://www.youtube.com/watch?v=9UoV_Affg88" target="_blank" rel="noopener">YouTube (Middle East Eye, 사령관)</a></div>
+</div></li>
+<li class="item"><span class="n">8</span><div>
+  <div class="t">이란 대통령: "미사일 전쟁보다 더 어려운, 조용한 경제 전쟁"<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>마수드 페제시키안 대통령은 경제 담당 관리들에게 이렇게 말했습니다. "우리는 미사일을 쏘고 파괴를 일으키는 전쟁보다 훨씬 어려운 조용한 전쟁을 하고 있습니다."</li>
+    <li>그는 "이것은 경제 전쟁이며, 결코 쉬운 싸움이 아닙니다"라고 덧붙였습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 전투와 함께 이란의 일반 시민들이 경제적으로도 압박받고 있습니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=0J2ouDkq-8w" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a></div>
+</div></li>
+<li class="item"><span class="n">9</span><div>
+  <div class="t">가자: "옐로 라인"이 계속 움직여 가족들이 집을 잃고, 나무 팔레트가 교실이 되다<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>알마가지 시장은 한 달이 채 안 되는 사이에 동부 지역 주택 500채 이상이 파괴됐다고 말합니다. Al Jazeera 기자는 이스라엘 통제 지역을 표시하는 "옐로 라인"이 계속 서쪽으로 옮겨 가고 있으며, 지상 진입이 없어도 매일 포격과 철거, 드론 공격이 이어진다고 전합니다. 이틀 전에 파괴된 집에는 다섯 가족이 머물고 있었습니다.</li>
+    <li>건축 자재가 막힌 가운데, 한 목수는 버려진 나무 팔레트를 뜯어 가구를 만듭니다. "이 나무가 우리의 가장 가까운 친구가 됐어요"라고 그는 말합니다. 한 학교는 팔레트로 교실을 만들어 수업을 이어 가고 있습니다.</li>
+    <li>가자시티 알나스르 극장의 폐허에서는 "내일 우리는 삶을 사랑한다"라는 주제로 가자 어린이 영화제가 열렸고, 아이들은 잔해 위 모래에 앉았습니다. 가자 주민 약 200만 명 거의 전부가 여전히 집을 떠나 있습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 휴전 뒤에도 집을 잃는 사람이 늘고 있고, 한편에서는 일과 배움을 지키려는 사람들이 있습니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=79VQYUItNPM" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a> / <a href="https://www.youtube.com/watch?v=3HMRrgj3ZQQ" target="_blank" rel="noopener">YouTube (TRT World, 팔레트)</a> / <a href="https://www.youtube.com/watch?v=CI419uQSROA" target="_blank" rel="noopener">YouTube (TRT World, 영화제)</a></div>
+</div></li>
+<li class="item"><span class="n">10</span><div>
+  <div class="t">레바논 남부: 양봉가들, 벌을 지키면서 하늘의 드론을 살피다<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>레바논 남부의 양봉가들은 이제 벌통뿐 아니라 하늘도 살펴야 합니다. 이번 전쟁이 시작된 뒤 이스라엘군 공습으로 수십 명이 숨졌는데, 전장이 아니라 벌통으로 가는 길에서였습니다.</li>
+    <li>영화감독이자 양봉가인 하산 하이다르는 다른 사람들이 떠날 때 마을에 남아, 동료 양봉가들이 숨져 가는 가운데 벌통을 지키려는 자신의 노력을 그들에 대한 헌사로 영상에 담았습니다.</li>
+    <li>남편을 잃은 자이납은 이제 가족을 부양하며 남편의 벌통을 지킵니다. "아이들과 벌들을 위해 강해져야 했어요. 남편이 둘 다 사랑했으니까요." 드론은 공격하기 전에 한 시간씩 떠 있기도 합니다. "무섭지만, 벌들의 윙윙거리는 소리가 더 커요."</li>
+  </ul>
+  <div class="why">왜 중요한가: 전쟁은 전투가 가장 심한 때가 지난 뒤에도 사람들의 일과 수입을 계속 앗아 갑니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=J2Gq6wlJ-4Y" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a></div>
+</div></li>
+<li class="item"><span class="n">11</span><div>
+  <div class="t">시리아: 이들리브에서 나무 150만 그루 이상 사라져, 10년 새 기온 2도 가까이 상승, 홍수로 8명 사망<span class="tag">일본에서 보도가 적음</span></div>
+  <ul>
+    <li>이들리브에서는 아사드 정부 시절 나무 150만 그루 이상이 베이거나 불탔습니다. 집으로 돌아온 아부 마흐무드는 나무가 모두 사라진 것을 보았습니다. "복구하려고 해 봤지만, 이 지역이 심한 가뭄을 겪었어요."</li>
+    <li>산불로 시리아 해안 지역의 약 100㎢가 타, 수십만 그루의 나무가 사라졌습니다. 지난 10년간 기온은 2도 가까이 올랐고 물은 더 귀해졌습니다.</li>
+    <li>올해는 폭우와 홍수도 닥쳐 어린이 5명을 포함해 8명이 숨지고 수백 가구가 대피했습니다. 이제 재건 때는 달라진 강수 패턴에 맞춰 배수 시설도 계획해야 합니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 전쟁 뒤의 재건이 빠르게 변하는 기후를 따라가지 못할 수 있습니다.</div>
+  <div class="src">출처: <a href="https://www.youtube.com/watch?v=RXmvREMnD1k" target="_blank" rel="noopener">YouTube (TRT World)</a></div>
+</div></li>
+</ol>
+</section>
+
+<section>
+<h2>세계 TOP 5 <small>가장 널리 보도된 소식</small></h2>
+<ol class="list">
+<li class="item"><span class="n">1</span><div>
+  <div class="t">미국 증시 급락: 나스닥 하루 5.28% 하락, S&amp;P 500과 다우는 고점 대비 10% 넘게 하락</div>
+  <ul>
+    <li>20일 뉴욕에서 나스닥은 5.28%, S&amp;P 500은 3.70%, 다우는 949포인트(1.93%) 떨어졌습니다. S&amp;P 500은 7거래일 연속 하락입니다.</li>
+    <li>AI·반도체 기업이 팔렸고, 엔비디아는 약 14% 떨어졌습니다. S&amp;P 500은 한 주 동안 8.6% 하락해 2025년 4월 이후 최악의 한 주를 보냈습니다.</li>
+    <li>나스닥은 이제 올해 오른 폭을 모두 잃었습니다. 금도 팔려 트로이온스당 3,500달러 선까지 내려갔습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: AI 기대로 올랐던 주식이 전 세계에서 동시에 떨어지고 있습니다. 주말이 지나면 일본과 아시아 시장은 물론 연금과 투자 펀드에도 영향을 줄 것입니다.</div>
+  <div class="src">출처: <a href="https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a> / <a href="https://www.upi.com/Top_News/US/2026/11/20/stocks-dow-jones-nasdaq-correction-territory/1061795214998/" target="_blank" rel="noopener">UPI</a> / <a href="https://finchannel.com/nasdaq-falls-5-3-as-sp-500-and-dow-enter-corrections/142573/american-business-trends/stock-prices/2026/11/" target="_blank" rel="noopener">FINCHANNEL (AP)</a> / <a href="https://247wallst.com/investing/2026/11/21/the-nasdaq-100-is-now-just-49-points-from-a-bear-market/" target="_blank" rel="noopener">24/7 Wall St.</a> / <a href="https://www.stocktitan.net/articles/stock-market-today-live-november-20-2026" target="_blank" rel="noopener">StockTitan</a> / <a href="https://www.kitco.com/news/article/2026-11-20/gold-falls-toward-3500-silver-slides-stock-markets-enter-correction" target="_blank" rel="noopener">Kitco</a></div>
+</div></li>
+<li class="item"><span class="n">2</span><div>
+  <div class="t">러시아와 유럽: 덴마크, 러시아 국방 무관 추방; 폴란드 영공에도 물체 진입</div>
+  <ul>
+    <li>덴마크 정보기관 PET는 20일, 9월에 있었던 우크라이나·미국 이중 국적 래퍼 암살 계획을 러시아 정보기관이 짜 놓았다고 밝혔습니다. 덴마크는 러시아 국방 무관을 추방하기로 했습니다. 러시아는 근거 없는 비난이라며 부인합니다.</li>
+    <li>우크라이나 코레츠키 총리는 19~20일 러시아의 대규모 공격으로 8명이 숨지고 28명이 다쳤다고 말합니다. 키이우의 다리와 전력 시설이 피해를 입었습니다. TRT World는 크리비리흐에서도 러시아의 공격으로 일곱 살 소년과 응급 구조사가 숨지고 최소 47명이 다쳤다고 전합니다.</li>
+    <li>폴란드는 이 공격 중 물체 3개(미사일 2발과 드론 1대로 추정)가 자국 영공에 들어왔다고 밝혔습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 미국·중국·러시아 정상회담 직후, 전쟁이 우크라이나 밖의 유럽 나라들로까지 번지고 있습니다.</div>
+  <div class="src">출처: <a href="https://www.aljazeera.com/amp/news/2026/11/21/denmark-expels-russian-diplomat-over-alleged-plot-to-kill-ukrainian-rapper" target="_blank" rel="noopener">Al Jazeera (덴마크)</a> / <a href="https://edition.cnn.com/2026/11/20/europe/denmark-russia-kyivstoner-assassination-plot-intl" target="_blank" rel="noopener">CNN</a> / <a href="https://www.yahoo.com/news/world/articles/denmark-says-russia-behind-plot-132135637.html" target="_blank" rel="noopener">Yahoo News</a> / <a href="https://www.rte.ie/news/ukraine/2026/1120/1599948-ukraine-russia/" target="_blank" rel="noopener">RTÉ</a> / <a href="https://www.aljazeera.com/news/2026/11/20/russia-unleashes-retaliatory-barrage-on-kyiv-bridges" target="_blank" rel="noopener">Al Jazeera (우크라이나)</a> / <a href="https://www.upi.com/Top_News/World-News/2026/11/20/Ukraine-Russia-mounts-deadly-missile-drone-assault/8421795165920" target="_blank" rel="noopener">UPI</a> / <a href="https://www.usnews.com/news/world/articles/2026-11-19/fire-broke-out-in-ukraines-kyiv-after-missile-strike-mayor-says" target="_blank" rel="noopener">US News (Reuters)</a> / <a href="https://www.youtube.com/watch?v=zttD_wfVat4" target="_blank" rel="noopener">YouTube (TRT World)</a> / <a href="https://www.youtube.com/watch?v=7Lk_oUtaGB4" target="_blank" rel="noopener">YouTube (Al Jazeera English)</a></div>
+</div></li>
+<li class="item"><span class="n">3</span><div>
+  <div class="t">튀르키예 안탈리아의 COP31 기후 회의 연장전; 합의 초안에서 "화석연료"라는 말이 사라지다</div>
+  <ul>
+    <li>회의는 20일 마지막 날을 합의 없이 넘겼습니다. 새 초안에는 화석연료에 대한 언급이 없습니다.</li>
+    <li>프랑스, 파나마 등은 이 표현을 다시 넣자고 하고, 사우디아라비아와 러시아 같은 산유국은 반대합니다. 아프리카 국가들은 대출이 아니라 무상 지원을 요구하고 있습니다.</li>
+    <li>에티오피아가 내년 COP32 개최지로 확정됐습니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 석유와 석탄에서 벗어나겠다는 약속이 뒷걸음질하고 있는지 보여 주는 계기가 될 것입니다.</div>
+  <div class="src">출처: <a href="https://news.un.org/en/story/2026/11/1168845" target="_blank" rel="noopener">UN News</a> / <a href="https://www.yahoo.com/news/science/articles/fossil-fuel-talks-deadlock-pushes-230641602.html" target="_blank" rel="noopener">Yahoo News</a> / <a href="https://www.forbes.com/sites/davidrvetter/2026/11/21/cop31-overtime-the-fight-to-put-the-f-word-back-in-the-deal/" target="_blank" rel="noopener">Forbes</a> / <a href="https://theclimatewatch.com/cop31-closing-plenary-suspended-amid-deadlock-over-fossil-fuels-and-climate-finance/" target="_blank" rel="noopener">The Climate Watch</a> / <a href="https://www.youtube.com/watch?v=XE2yXt5afD4" target="_blank" rel="noopener">YouTube (TRT World)</a> / <a href="https://www.youtube.com/watch?v=4RNL0YkC62c" target="_blank" rel="noopener">YouTube (TRT World, 아프리카)</a></div>
+</div></li>
+<li class="item"><span class="n">4</span><div>
+  <div class="t">멕시코: 카르텔 두목 "엘 차포 이시드로" 체포; 시날로아에서 총격전과 트럭 화재</div>
+  <ul>
+    <li>멕시코 특수부대는 FBI 10대 지명수배자 명단에 올라 있던 파우스토 이시드로 메사 플로레스를 체포했습니다.</li>
+    <li>이후 시날로아주에서 총격전이 벌어지고 트럭이 불탔습니다. 근처 야구장에 있던 관중들은 놀라 도망쳤습니다.</li>
+    <li>멕시코 정부는 민간인을 보호하기 위해 군이 시날로아에 계속 머물 것이라고 밝혔습니다.</li>
+  </ul>
+  <div class="src">출처: <a href="https://www.aljazeera.com/news/2026/11/21/who-is-el-chapo-isidro-the-alleged-cartel-boss-arrested-in-mexico" target="_blank" rel="noopener">Al Jazeera</a> / <a href="https://www.npr.org/2026/11/21/nx-s1-6049672/cartel-boss-el-chapo-isidro-detained" target="_blank" rel="noopener">NPR</a> / <a href="https://www.cbsnews.com/news/mexico-drug-kingpin-arrest-fausto-isidro-meza-flores-sinaloa/" target="_blank" rel="noopener">CBS News</a> / <a href="https://www.nbcnews.com/world/mexico/mexico-detains-top-cartel-boss-el-chapo-isidro-rcna610559" target="_blank" rel="noopener">NBC News</a> / <a href="https://www.youtube.com/watch?v=MmkhBs-p8Ks" target="_blank" rel="noopener">YouTube (TRT World)</a></div>
+</div></li>
+<li class="item"><span class="n">5</span><div>
+  <div class="t">국제사법재판소, 미얀마가 로힝야에 대한 집단학살을 저질렀다고 판결</div>
+  <ul>
+    <li>유엔 최고 법원인 국제사법재판소는 19일, 미얀마가 소수민족 로힝야에 대한 집단학살을 저질렀다고 판결했습니다. 재판관 표결은 9대 6이었습니다.</li>
+    <li>이 법원이 집단학살에 대해 한 나라에 책임을 물은 것은 처음입니다. 이 사건은 7년 전 감비아가 제기했습니다.</li>
+    <li>이 판결은 최종 판결이며 항소할 수 없습니다. 배상 금액은 나중에 정해집니다.</li>
+  </ul>
+  <div class="why">왜 중요한가: 남아프리카공화국이 이스라엘을 상대로 낸 사건 등 다른 사건에도 영향을 줄 것으로 예상됩니다.</div>
+  <div class="src">출처: <a href="https://www.hrw.org/news/2026/11/19/world-court-finds-myanmar-committed-rohingya-genocide" target="_blank" rel="noopener">Human Rights Watch</a> / <a href="https://www.opb.org/article/2026/11/19/top-u-n-court-rules-myanmar-committed-genocide-against-rohingya/" target="_blank" rel="noopener">OPB (NPR)</a> / <a href="https://cbsnews.com/news/myanmar-genocide-rohingyas-un-top-court" target="_blank" rel="noopener">CBS News</a> / <a href="https://aa.com.tr/en/asia-pacific/factbox-inside-icjs-historic-rohingya-genocide-ruling-against-myanmar/4131218" target="_blank" rel="noopener">Anadolu</a> / <a href="https://www.youtube.com/watch?v=5W__vvUoaNw" target="_blank" rel="noopener">YouTube (Middle East Eye)</a></div>
+</div></li>
+</ol>
+</section>
+
+<section>
+<h2>세계 곳곳 <small>일본 언론에서 보기 드문 소식</small></h2>
+<div class="mini">
+  <div class="item"><div><div class="t">AI가 스스로 공격하는 무기: 유엔 회의, 구속력 있는 규칙 마련 못 해</div>튀르키예 아나돌루 통신에 따르면, 11월 16~20일 제네바에서 열린 회의는 법적 구속력이 있는 규칙을 내놓지 못했습니다. 50개국 넘는 나라가 구속력 있는 규칙을 위한 일정표를 원했지만, 미국, 러시아, 이스라엘은 반대했습니다(최종 문서의 문구는 확인하지 못했습니다).<div class="src">출처: <a href="https://aa.com.tr/en/world/morning-briefing-nov-21-2026/4132676" target="_blank" rel="noopener">Anadolu</a> / <a href="https://www.opb.org/article/2026/11/16/u-n-talks-seek-to-rein-in-killer-robots-as-fears-grow-over-autonomous-weapons/" target="_blank" rel="noopener">OPB (NPR)</a> / <a href="https://www.hurriyetdailynews.com/un-chief-urges-action-to-rein-in-merciless-autonomous-weapons-229462" target="_blank" rel="noopener">Hürriyet Daily News</a></div></div></div>
+  <div class="item"><div><div class="t">남아프리카공화국: 석 달 사이 여성 600명 가까이 살해, 전국에서 시위</div>경찰 통계에 따르면 7월부터 9월 사이 여성 600명 가까이가 살해됐습니다. 여성에 대한 폭력과 정부의 무대응에 항의하는 시위가 전국에서 열렸습니다.<div class="src">출처: <a href="https://www.youtube.com/watch?v=5F2RPFb1EiQ" target="_blank" rel="noopener">YouTube (TRT World)</a></div></div></div>
+  <div class="item"><div><div class="t">유럽 곳곳에서 생활비 부담 항의 시위</div>물가가 계속 오르는 가운데, 시위대는 주거, 임금, 공공 서비스에 돈을 써야 한다고 요구했습니다. 런던에서는 시위대가 군사비를 늘리겠다는 정부 계획을 비판했습니다.<div class="src">출처: <a href="https://www.youtube.com/watch?v=fdTO2f2bhek" target="_blank" rel="noopener">YouTube (TRT World)</a></div></div></div>
+  <div class="item"><div><div class="t">러시아 루블, 조금 강세</div>20일 러시아 중앙은행 공식 환율은 미국 달러당 81.93루블, 위안당 12.25루블이었습니다.<div class="src">출처: <a href="https://www.vbr.ru/novosti/kursy-valyut/2026/11/19/kurs-valut-20-noyabrya-2026/" target="_blank" rel="noopener">vbr.ru</a></div></div></div>
+</div>
+</section>
+
+<section>
+<h2>일본 TOP 5</h2>
+<ol class="list">
+<li class="item"><span class="n">1</span><div><div class="t">후쿠시마: 폭설로 국도에 나무가 쓰러져 기타시오바라에서 514세대 948명 고립</div>20일부터 내린 습한 눈으로 국도 459호선에서 나무가 잇따라 쓰러져, 이나와시로와 기타시오바라 사이 약 18km가 막혔습니다. 호텔 투숙객까지 포함하면 1,300명이 넘는다는 보도도 있습니다. JR 반에쓰 서선 열차는 쓰러진 나무에 부딪혀 탈선했습니다.<div class="src">출처: <a href="https://news.web.nhk/newsweb/na/nd-20261121de79612" target="_blank" rel="noopener">NHK</a> / <a href="https://www.minpo.jp/articles/-/280546" target="_blank" rel="noopener">후쿠시마민포</a> / <a href="https://news.yahoo.co.jp/articles/771ec368bb02d48005392160d2bb349956a276ef" target="_blank" rel="noopener">후쿠시마방송</a></div></div></li>
+<li class="item"><span class="n">2</span><div><div class="t">니가타 비 계속; 조에쓰와 가시와자키에 토사 재해 위험 레벨 4 경보</div>원인은 겨울형 기압 배치입니다. 기상대는 22일 오전 늦게까지 토사 재해에 엄중히 경계할 것을 당부하고 있습니다. 일본 북부와 동부 산간에는 눈도 쌓이고 있습니다.<div class="src">출처: <a href="https://news.web.nhk/newsweb/na/nd-20261121de79668" target="_blank" rel="noopener">NHK</a> / <a href="https://news.web.nhk/newsweb/na/nd-20261121de79497" target="_blank" rel="noopener">NHK (기상 예보관 해설)</a></div></div></li>
+<li class="item"><span class="n">3</span><div><div class="t">미국 증시 급락에 엔화 강세: 뉴욕에서 달러당 158.5엔 안팎</div>20일 미국 주가가 크게 떨어지고 미국 금리도 내려, 엔화가 매수됐습니다. 종가는 158.57엔 안팎으로, 전날보다 1엔 남짓 엔화가 강해졌습니다.<div class="src">출처: <a href="https://zai.diamond.jp/articles/-/499473" target="_blank" rel="noopener">Zai FX!</a> / <a href="https://finance.yahoo.co.jp/news/detail/a14589141df2d973c3986e48eb539b70ca2a3b84" target="_blank" rel="noopener">Traders Web</a> / <a href="https://www.oanda.jp/lab-education/market_news/kn_2026112001002399/" target="_blank" rel="noopener">교도통신</a> / <a href="https://kabutan.jp/news/marketnews/?b=n202611210099" target="_blank" rel="noopener">Kabutan (Fisco)</a></div></div></li>
+<li class="item"><span class="n">4</span><div><div class="t">장기: 후지이 소타, 4연승으로 류오 타이틀 방어, 6연패(連覇)</div>미야자키현 미야코노조에서 열린 4국에서 도전자 핫토리 신이치로 7단을 꺾었습니다. 와타나베 아키라 9단에 이어, 류오 타이틀을 6연속으로 차지한 두 번째 기사가 됐습니다.<div class="src">출처: <a href="https://news.web.nhk/newsweb/na/nd-20261121de79696" target="_blank" rel="noopener">NHK</a> / <a href="https://times.abema.tv/articles/-/10291175" target="_blank" rel="noopener">ABEMA TIMES</a> / <a href="https://news.yahoo.co.jp/articles/2a1967eff2d34dcf97b69de0442ba4947ebd140b" target="_blank" rel="noopener">주쿄TV</a></div></div></li>
+<li class="item"><span class="n">5</span><div><div class="t">마에바시 시내 곰, 21일에도 찾지 못해; 22일 아침 수색 재개</div>17일에 어미와 새끼로 보이는 곰 두 마리가 목격됐습니다. 새끼는 붙잡혔지만, 어미로 보이는 곰은 아직 찾지 못했습니다.<div class="src">출처: <a href="https://news.web.nhk/newsweb" target="_blank" rel="noopener">NHK (최신)</a> / <a href="https://news.web.nhk/newsweb/na/nd-20261119de78168" target="_blank" rel="noopener">NHK (11월 19일)</a> / <a href="https://news.ksb.co.jp/ann/article/17057145" target="_blank" rel="noopener">ANN</a></div></div></li>
+</ol>
+</section>
+
+<section>
+<h2>원유와 금</h2>
+<div class="grid">
+  <div class="card"><h3>원유 (배럴당, 11월 20일 정산가)</h3>
+    <div class="row"><span>브렌트유</span><span class="v">$92.57<span class="c up">▲0.64%</span></span></div>
+    <div class="row"><span>WTI</span><span class="v">$83.98<span class="c up">▲0.93%</span></span></div>
+    <span class="small">중동 긴장 때문에 이날은 올랐지만, 3주 연속 하락했습니다(브렌트 -3.41%, WTI -5.17%).</span>
+    <span class="small">출처: <a href="https://energynow.com/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/" target="_blank" rel="noopener">EnergyNow</a> / <a href="https://www.wam.ae/en/article/c3d8k4x-oil-prices-settle-higher-brent-set-for-weekly" target="_blank" rel="noopener">WAM</a> / <a href="https://financefeeds.com/brent-crude-oil-price-92-57-saturday-week-ahead-opec-plus-29-november-bull-96-bear-89/" target="_blank" rel="noopener">FinanceFeeds</a></span></div>
+  <div class="card"><h3>금 (트로이온스당, 11월 20일)</h3>
+    <div class="row"><span>금</span><span class="v">≈$3,500<span class="c flat">대략</span></span></div>
+    <span class="small">종가는 확인하지 못했습니다. 이날 저가는 3,502.93달러로 2025년 9월 이후 가장 낮았습니다. 선물은 하루 동안 5% 가까이 떨어졌다고 전해집니다.</span>
+    <span class="small">출처: <a href="https://www.kitco.com/news/article/2026-11-20/gold-falls-toward-3500-silver-slides-stock-markets-enter-correction" target="_blank" rel="noopener">Kitco</a> / <a href="https://longbridge.com/en/news/306334814" target="_blank" rel="noopener">Longbridge</a></span></div>
+</div>
+</section>
+
+<section>
+<h2>주식 시장</h2>
+<div class="grid">
+  <div class="card"><h3>일본 (11월 20일)</h3><div class="row"><span>닛케이 225</span><span class="v">56,436.65<span class="c down">▼5.06%</span></span></div><span class="small">3,007.56엔 하락, 역대 5번째로 큰 낙폭입니다.</span><span class="small">출처: <a href="https://www.oanda.jp/lab-education/market_news/mn_1045088_202611201757/" target="_blank" rel="noopener">OANDA (닛케이 요약)</a> / <a href="https://tbladvisory.com/20261120nk/" target="_blank" rel="noopener">TBL Advisory</a></span></div>
+  <div class="card"><h3>호주 (11월 20일)</h3><div class="row"><span>ASX 200</span><span class="v">8,592.60<span class="c down">▼1.58%</span></span></div><span class="small">주간 489.6포인트(5.39%) 하락, 2020년 6월 이후 가장 큰 주간 낙폭입니다.</span><span class="small">출처: <a href="https://sharetrader.com.au/news/2026-11-20-asx-200-sheds-almost-500-points-for-the-week-as-materials-slump-12-3-per-cent" target="_blank" rel="noopener">Sharetrader</a> / <a href="https://kalkine.com.au/news/daily-wrap/asx-200-slides-to-100-day-low-as-weekly-losses-deepen" target="_blank" rel="noopener">Kalkine</a> / <a href="https://journalarta.com/en/2026/11/20/asx-200-today-australian-shares-fall-1-58-to-8592-6-as-tech-and-miners-slide/" target="_blank" rel="noopener">JournalArta</a></span></div>
+  <div class="card"><h3>미국 (11월 20일 종가)</h3>
+    <div class="row"><span>다우</span><span class="v">48,147.33<span class="c down">▼1.93%</span></span></div>
+    <div class="row"><span>S&amp;P 500</span><span class="v">6,910.39<span class="c down">▼3.70%</span></span></div>
+    <div class="row"><span>나스닥</span><span class="v">22,617.73<span class="c down">▼5.28%</span></span></div>
+    <span class="small">다우는 949.73포인트 떨어졌습니다. S&amp;P 500과 다우는 이제 고점 대비 10% 넘게 하락한 상태입니다.</span>
+    <span class="small">출처: <a href="https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html" target="_blank" rel="noopener">CNBC</a> / <a href="https://www.upi.com/Top_News/US/2026/11/20/stocks-dow-jones-nasdaq-correction-territory/1061795214998/" target="_blank" rel="noopener">UPI</a> / <a href="https://stockinvest.us/digest/digest-us-market-close-2026-11-20" target="_blank" rel="noopener">StockInvest</a></span></div>
+  <div class="card"><h3>중국 (11월 20일)</h3><div class="row"><span>상하이종합</span><span class="v">3,533.79<span class="c down">▼1.22%</span></span></div><span class="small">43.82포인트 하락.</span><span class="small">출처: <a href="https://www.nikkei.com/markets/" target="_blank" rel="noopener">닛케이 (시장)</a></span></div>
+  <div class="card"><h3>러시아 (11월 20일)</h3><div class="row"><span>MOEX</span><span class="v">≈2,353<span class="c down">▼2.67%</span></span></div><span class="small">대략적인 값입니다. 어제 판과 같은 값입니다(더 새로운 수치를 찾지 못했습니다). 다른 보도는 2,358.24(-2.53%)로 전합니다.</span><span class="small">출처: <a href="https://www.ad-hoc-news.de/boerse/news/marktberichte/moex-russia-falls-2-53-prozent-as-geopolitical-hopes-fade/70540840" target="_blank" rel="noopener">ad-hoc-news</a></span></div>
+</div>
+</section>
+
+<section>
+<h2>환율</h2>
+<div class="grid">
+  <div class="card"><h3>엔 (뉴욕 종가, 11월 20일)</h3><div class="row"><span>1달러</span><span class="v">158.57엔<span class="c up">엔화 1.12 강세</span></span></div><span class="small">닛케이 신문은 158.40~158.50엔으로 전해, 수치가 조금 다릅니다.</span><span class="small">출처: <a href="https://zai.diamond.jp/articles/-/499473" target="_blank" rel="noopener">Zai FX!</a> / <a href="https://myforex.com/ja/news/dzh261121069.html" target="_blank" rel="noopener">Myforex</a> / <a href="https://www.nikkei.com/markets/currencies/" target="_blank" rel="noopener">닛케이</a></span></div>
+  <div class="card"><h3>호주 달러 (11월 20일)</h3><div class="row"><span>1호주달러</span><span class="v">US$0.6667</span></div><div class="row"><span>1호주달러</span><span class="v">≈105.7엔<span class="c flat">계산값</span></span></div><span class="small">미국 달러 환산값은 20일 시드니 저녁 기준입니다(어제 판과 같음). 엔 환산값은 이 값과 달러/엔 158.57엔으로 계산했습니다.</span><span class="small">출처: <a href="https://www.areanews.com.au/story/9395619/grim-week-wipes-billions-from-australian-share-market/" target="_blank" rel="noopener">Area News</a></span></div>
+  <div class="card"><h3>중국 위안 (11월 20일)</h3><div class="row"><span>1달러</span><span class="v">≈6.69위안<span class="c flat">계산값</span></span></div><span class="small">러시아 중앙은행 공식 환율(달러당 81.93루블 ÷ 위안당 12.2546루블)로 계산했습니다. 시장 종가는 확인하지 못했습니다.</span><span class="small">출처: <a href="https://www.vbr.ru/novosti/kursy-valyut/2026/11/19/kurs-valut-20-noyabrya-2026/" target="_blank" rel="noopener">vbr.ru</a></span></div>
+  <div class="card"><h3>러시아 루블 (11월 20일)</h3><div class="row"><span>1달러</span><span class="v">81.93루블</span></div><span class="small">러시아 중앙은행이 정한 공식 환율입니다.</span><span class="small">출처: <a href="https://www.vbr.ru/novosti/kursy-valyut/2026/11/19/kurs-valut-20-noyabrya-2026/" target="_blank" rel="noopener">vbr.ru</a></span></div>
+</div>
+</section>
+
+<footer>지금 여기에서 일어나는 일을 알아차리기 위해. 매일 일본 시간 오전 5시쯤 갱신합니다. 금융 관련 결정을 내리기 전에는 반드시 실시간 시장 정보를 확인해 주세요.</footer>
+</div>
+
+</main>
+<footer style="padding: 56px 24px 32px; background: #2A3832; color: #9FA9B0; font-size: 14px; line-height: 1.9">
+  <div style="max-width: 1120px; margin: 0 auto">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px">
+      <div>
+        <div style="font-family: 'Jost', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: #F2F0EB; margin-bottom: 8px; display: flex; align-items: center; gap: 10px"><svg aria-hidden="true" width="28" height="28" viewBox="0 0 40 40" style="flex: none"><path d="M33 13.5A15 15 0 1 0 34.5 24" fill="none" stroke="#8FC1AC" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="20" r="3.2" fill="#E8C987"/></svg><span><span style="color: #8FC1AC">KoKoRo</span>Being</span></div>
+        <div>너무 애쓰는 마음이 돌아올 곳.<br>온라인 마인드풀니스</div>
+        <div style="margin-top: 8px">Asami Sakura</div>
+      </div>
+      <nav aria-label="Site" style="display: flex; flex-direction: column; gap: 4px">
+        <div style="font-family: 'Jost', sans-serif; font-size: 12px; letter-spacing: 0.2em; color: #8A939A; margin-bottom: 4px">MENU</div>
+        <a href="../../en/index.html" style="color: #C9CFD3; text-decoration: none">홈</a><a href="../../en/profile/index.html" style="color: #C9CFD3; text-decoration: none">사쿠라 아사미 소개</a><a href="../../ko/news/index.html" style="color: #C9CFD3; text-decoration: none">지금 여기 뉴스</a><a href="../../en/index.html#contact" style="color: #C9CFD3; text-decoration: none">문의</a><a href="../../index.html" style="color: #C9CFD3; text-decoration: none">日本語</a>
+      </nav>
+    </div>
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 1px solid #3E4D46; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px">
+      <nav aria-label="Legal" style="display: flex; flex-wrap: wrap; gap: 8px 20px"><a href="../../legal/tokushoho.html" style="color: #C9CFD3; text-decoration: none">특정상거래법 표기 (일본어)</a><a href="../../legal/privacy.html" style="color: #C9CFD3; text-decoration: none">개인정보 처리방침 (일본어)</a><a href="../../legal/disclaimer.html" style="color: #C9CFD3; text-decoration: none">면책 사항 (일본어)</a></nav>
+      <small>© 2026 KoKoRoBeing / 咲空麻美</small>
+    </div>
+  </div>
+</footer>
+<script src="../../news/news.js"></script>
+</body>
+</html>

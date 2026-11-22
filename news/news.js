@@ -4,12 +4,18 @@
   var d = document, root = d.documentElement;
   var wrap = d.querySelector('main .wrap');
   if (!wrap || !wrap.querySelectorAll) return;
-  var en = (root.lang || '').toLowerCase().indexOf('en') === 0;
-  var T = en
-    ? { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page', world: 'World', japan: 'Japan', mideast: 'Middle East',
-        chip: "Today's main news", big: 'What is happening now, in three minutes.', sub: 'The main news from the world and Japan, in plain words. Tap a headline to read more.' }
-    : { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次', world: '世界', japan: '日本', mideast: '中東',
-        chip: 'けさの主なニュース', big: 'いま起きていることを、3分で。', sub: '世界と日本のニュースを、やさしい言葉でまとめています。見出しを押すと、くわしく読めます。' };
+  var lg = (root.lang || 'ja').toLowerCase().slice(0, 2);
+  var TT = {
+    en: { more: 'Read more', close: 'Close', nums: 'Key numbers', nav: 'On this page', world: 'World', japan: 'Japan', mideast: 'Middle East',
+        chip: "Today's main news", big: 'What is happening now, in three minutes.', sub: 'The main news from the world and Japan, in plain words. Tap a headline to read more.' },
+    id: { more: 'Baca selengkapnya', close: 'Tutup', nums: 'Angka pagi ini', nav: 'Di halaman ini', world: 'Dunia', japan: 'Jepang', mideast: 'Timur Tengah',
+        chip: 'Berita utama hari ini', big: 'Apa yang terjadi sekarang, dalam tiga menit.', sub: 'Berita utama dari dunia dan Jepang, dengan kata-kata sederhana. Ketuk judul untuk membaca selengkapnya.' },
+    ko: { more: '자세히 읽기', close: '닫기', nums: '오늘 아침 숫자', nav: '이 페이지 목차', world: '세계', japan: '일본', mideast: '중동',
+        chip: '오늘의 주요 뉴스', big: '지금 일어나는 일을 3분 안에.', sub: '세계와 일본의 주요 뉴스를 쉬운 말로 정리했습니다. 제목을 누르면 자세히 읽을 수 있습니다.' },
+    ja: { more: 'くわしく読む', close: 'とじる', nums: 'けさの数字', nav: 'このページの目次', world: '世界', japan: '日本', mideast: '中東',
+        chip: 'けさの主なニュース', big: 'いま起きていることを、3分で。', sub: '世界と日本のニュースを、やさしい言葉でまとめています。見出しを押すと、くわしく読めます。' }
+  };
+  var T = TT[lg] || TT.ja;
   function el(tag, cls, text) { var e = d.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
   function own(node) { // 子の要素をのぞいた、そのものの文字
     var s = '';
