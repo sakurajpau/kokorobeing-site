@@ -33,7 +33,7 @@
     nav.appendChild(a);
   });
 
-  // 世界のトップ5：1番を大きく。どの記事も、くわしい中身まで全部ひらいて見せる（たたまない）
+  // 世界のトップ5：1番を大きく
   var world = wrap.querySelector('.sec-world ol.list');
   if (world) {
     var items = [].filter.call(world.children, function (li) { return li.classList.contains('item'); });
@@ -41,6 +41,24 @@
       if (i === 0) { li.classList.add('lead'); if (items.length > 2) li.style.gridRow = '1 / span ' + (items.length - 1); }
     });
   }
+
+  // 世界・日本のどの記事も、はじめの数行だけ見せて「くわしく読む」ボタンでひらく
+  [].forEach.call(wrap.querySelectorAll('.sec-world ol.list > li.item, .sec-japan ol.list > li.item'), function (li) {
+    var body = li.querySelector(':scope > div'), title = body && body.querySelector('.t');
+    if (!body || !title || !body.querySelector('ul')) return;
+    li.classList.add('fold');
+    var btn = el('button', 'nx-more', T.more);
+    btn.type = 'button';
+    btn.setAttribute('aria-expanded', 'false');
+    function toggle() {
+      var open = li.classList.toggle('open');
+      btn.textContent = open ? T.close : T.more;
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    btn.addEventListener('click', toggle);
+    title.addEventListener('click', toggle);
+    body.appendChild(btn);
+  });
 
   // 見出しの上に小さな分類（世界・日本）を付ける
   [['.sec-world', T.world], ['.sec-japan', T.japan]].forEach(function (p) {

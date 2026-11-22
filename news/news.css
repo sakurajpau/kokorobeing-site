@@ -47,10 +47,8 @@
 .nx .item.fold .t { cursor:pointer; }
 .nx .item.fold:not(.open) .src { display:none; }
 .nx .item.fold:not(.open) ul { display:none; }
-.nx .item.lead.fold:not(.open) ul { display:block; list-style:none; margin:0; padding:0; color:var(--sub); }
-.nx .item.lead.fold:not(.open) ul li:not(:first-child) { display:none; }
-.nx .sec-world .item.fold:not(.lead):not(.open) .why { display:none; }
-.nx .sec-world .item.fold:not(.lead):not(.open) .t { margin-bottom:0; }
+.nx .item.fold:not(.open) ul { display:block; list-style:none; margin:0; padding:0; color:var(--sub); }
+.nx .item.fold:not(.open) ul li:not(:first-child) { display:none; }
 .nx-more { margin-top:10px; min-height:44px; padding:0 20px; border:1px solid var(--shu); border-radius:999px; background:transparent; color:var(--shu); font:inherit; font-size:.88rem; font-weight:700; cursor:pointer; }
 .nx .item.lead .nx-more { background:var(--shu); color:#fff; }
 .nx-more:hover, .nx-more:focus-visible { background:var(--shu); color:#fff; }
