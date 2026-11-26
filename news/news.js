@@ -30,7 +30,7 @@
     if (s.classList.contains('today')) s.classList.add('sec-today');
     else if (s.classList.contains('mideast')) s.classList.add('sec-mideast');
     else if (s.querySelector('ol.list')) s.classList.add(lists++ ? 'sec-japan' : 'sec-world');
-    else if (s.querySelector('.mini')) s.classList.add('sec-other');
+    else if (s.querySelector('.mini')) { s.classList.add('sec-other'); if (s.classList.contains('hokkori')) s.classList.add('sec-wide'); }
     else if (s.querySelector('.grid')) { s.classList.add('sec-market'); market.push(s); }
     var h = s.querySelector('h2');
     if (!h) return;
@@ -39,6 +39,10 @@
     a.href = '#' + s.id;
     nav.appendChild(a);
   });
+
+  // 食と医療があるときは、日本の面を2段ぶんの高さにして、右の列に「ほかの国」「食と医療」を上下にならべる
+  var jp = wrap.querySelector('.sec-japan');
+  if (jp && wrap.querySelector('section.food.sec-other')) jp.classList.add('span2');
 
   // 世界のトップ5：1番は大きくひらいたまま、2番からはたたむ
   // いちばん上の面(中東情勢があればそれ、なければ世界)は1番を大きく。そのあとの世界の面は、どれも押すとひらく

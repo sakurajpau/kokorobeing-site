@@ -116,6 +116,9 @@ body { color:var(--ink); }
   .nx .wrap > * { grid-column:1 / -1; }
   .nx .wrap > .sec-japan { grid-column:1; padding-right:26px; }
   .nx .wrap > .sec-other { grid-column:2; padding-left:26px; border-left:1px solid var(--ink); }
+  /* 2026-11-27: 食と医療は「ほかの国」の下(右の列)に入れて、日本の横の空きをなくす。ほっこりは横いっぱい */
+  .nx .wrap > .sec-japan.span2 { grid-row:span 2; }
+  .nx .wrap > .sec-other.sec-wide { grid-column:1 / -1; padding-left:0; border-left:0; }
   .nx .sec-top .list { grid-template-columns:minmax(0,1.55fr) minmax(0,1fr); column-gap:0; align-items:start; }
   .nx .sec-top .item.lead { grid-column:1; padding:0 26px 0 0; border-bottom:0; }
   .nx .sec-top .item:not(.lead) { grid-column:2; padding-left:26px; border-left:1px solid var(--ink); }
